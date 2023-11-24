@@ -15,6 +15,6 @@ body:
       label: ✅ 체크 사항
       description: 완료한 기능을 체크해주세요.
       placeholder: 기능에 대해서 나열해주세요.
-      value: - [ ]
+      value: `- [ ]`
     validations:
       required: true
