@@ -1,22 +1,17 @@
 "use client";
 
 import { pageview } from "@/libs/gtag";
-import { useRouter } from "next/router";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 function useGAPageView() {
-  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const handleRouteChange = (url: URL) => {
-      pageview(url);
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+    const url = pathname + searchParams.toString();
+    pageview(url);
+  }, [pathname, searchParams]);
 }
 
 export default useGAPageView;
