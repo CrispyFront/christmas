@@ -1,9 +1,9 @@
 "use client";
 
-import GoogleAnalytics from "GoogleAnalytics";
-import Hotjar from "Hotjar";
-import type { Metadata } from "next";
+import GoogleAnalytics from "components/tracking/GoogleAnalytics";
+import Hotjar from "components/tracking/Hotjar";
 import useGAPageView from "hooks/useGAPageView";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Christmas Test",
