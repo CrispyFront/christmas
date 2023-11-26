@@ -1,7 +1,9 @@
+"use client";
+
 import GoogleAnalytics from "GoogleAnalytics";
 import Hotjar from "Hotjar";
 import type { Metadata } from "next";
-import useGAPageView from "./hooks/useGAPageView";
+import useGAPageView from "hooks/useGAPageView";
 
 export const metadata: Metadata = {
   title: "Christmas Test",

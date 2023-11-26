@@ -1,10 +1,12 @@
+"use client";
+
 import { pageview } from "@/libs/gtag";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 function useGAPageView() {
   const router = useRouter();
-  
+
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
       pageview(url);
