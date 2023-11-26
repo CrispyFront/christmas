@@ -1,12 +1,7 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+"use client";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Christmas Test",
-  description: "☃️ 크리스마스에 뭐하지?",
-};
+import Layout from "components/layout/Layout";
+import "globals.css";
 
 export default function RootLayout({
   children,
@@ -15,7 +10,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }
