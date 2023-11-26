@@ -41,22 +41,24 @@ function SharerKaKao() {
   }, []);
 
   return (
-    <>
-      <StyledWrapper onClick={sharedKakao}>
-        <Image src={kakaoLogo} alt="카카오톡 공유" />
-      </StyledWrapper>
-    </>
+    <StyledWrapper onClick={sharedKakao}>
+      <Image src={kakaoLogo} alt="카카오톡 공유" />
+    </StyledWrapper>
   );
 }
 
 export default SharerKaKao;
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: #ffeb00;
-  justify-content: center;
-  align-items: center;
+
   cursor: pointer;
 `;
