@@ -8,7 +8,7 @@ interface GTagEvent {
 }
 
 export const pageview = (url: URL) => {
-  window.gtag("config", GA_TRACKING_ID, {
+  window.gtag("config", GA_TRACKING_ID as string, {
     page_path: url,
   });
 };
