@@ -1,21 +1,25 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import React from "react";
-const inter = Inter({ subsets: ["latin"] });
+"use client";
 
-export const metadata: Metadata = {
-  title: "Christmas Test",
-  description: "☃️ 크리스마스에 뭐하지?",
-};
+import GoogleAnalytics from "components/tracking/GoogleAnalytics";
+import Hotjar from "components/tracking/Hotjar";
+import useGAPageView from "hooks/useGAPageView";
+import React from "react";        
+
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  useGAPageView();
+
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics />
+        <Hotjar />
+        {children}
+      </body>
     </html>
   );
 }
