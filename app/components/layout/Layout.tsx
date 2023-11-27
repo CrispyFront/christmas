@@ -16,19 +16,19 @@ function Layout({ children }: PropsWithChildren) {
   }, [windowSize.height]);
 
   return (
-    <StyledWrapper background={BackgroundImg.src}>{children}</StyledWrapper>
+    <StyledWrapper $background={BackgroundImg.src}>{children}</StyledWrapper>
   );
 }
 
 export default Layout;
 
-const StyledWrapper = styled.div<{ background: string }>`
+const StyledWrapper = styled.div<{ $background: string }>`
   width: 100%;
   height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
   max-width: 480px;
   margin: 0 auto;
-  background-image: url(${(props) => props.background});
+  background-image: url(${(props) => props.$background});
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
