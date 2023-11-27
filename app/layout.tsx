@@ -5,6 +5,7 @@ import Hotjar from "components/tracking/Hotjar";
 import useGAPageView from "hooks/useGAPageView";
 import Layout from "components/layout/Layout";
 import "globals.css";
+import React from "react";
 
 export default function RootLayout({
   children,
