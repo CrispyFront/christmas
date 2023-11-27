@@ -3,8 +3,9 @@
 import GoogleAnalytics from "components/tracking/GoogleAnalytics";
 import Hotjar from "components/tracking/Hotjar";
 import useGAPageView from "hooks/useGAPageView";
-import React from "react";        
-
+import Layout from "components/layout/Layout";
+import "globals.css";
+import React from "react";
 
 export default function RootLayout({
   children,
@@ -18,7 +19,7 @@ export default function RootLayout({
       <body>
         <GoogleAnalytics />
         <Hotjar />
-        {children}
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
