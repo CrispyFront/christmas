@@ -1,8 +1,8 @@
 "use client";
-import JingleBell from "assets/images/jingleBell.png";
-import SnowAndTree from "assets/images/snowManAndTree.png";
-import StartButton from "assets/images/start.png";
-import TitleFrame from "assets/images/titleFrame.png";
+import JingleBell from "assets/images/JingleBell.png";
+import SnowAndTree from "assets/images/SnowManAndTree.png";
+import StartButton from "assets/images/Start.png";
+import TitleFrame from "assets/images/TitleFrame.png";
 import Image from "next/image";
 import { styled } from "styled-components";
 
