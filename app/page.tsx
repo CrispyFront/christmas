@@ -1,8 +1,8 @@
 "use client";
-import JingleBell from "@/assets/images/jingleBell.png";
-import SnowAndTree from "@/assets/images/snowManAndTree.png";
-import StartButton from "@/assets/images/start.png";
-import TitleFrame from "@/assets/images/titleFrame.png";
+import JingleBell from "assets/images/jingleBell.png";
+import SnowAndTree from "assets/images/snowManAndTree.png";
+import StartButton from "assets/images/start.png";
+import TitleFrame from "assets/images/titleFrame.png";
 import Image from "next/image";
 import { styled } from "styled-components";
 
@@ -53,7 +53,7 @@ const StyledTitle = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -50%);
   font-size: 3rem;
   font-weight: 700;
   text-align: right;
