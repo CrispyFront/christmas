@@ -3,6 +3,14 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-};
+  sentry: {
+    hideSourceMaps: true,
+  },
+}
 
-module.exports = nextConfig;
+const sentryWebpackPluginOptions = {
+  silent: true,
+  authToken: process.env.NEXT_PUBLIC_SENTRY_AUTH_TOKEN,
+}
+
+module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions)
