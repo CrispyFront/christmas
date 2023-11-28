@@ -1,8 +1,8 @@
 "use client";
 
-import { pageview } from "@/libs/gtag";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
+import { pageview } from "../libs/gtag";
 
 function useGAPageView() {
   const pathname = usePathname();
