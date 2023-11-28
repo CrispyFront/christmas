@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'NeoDunggeunmo';
     &::-webkit-scrollbar {
       display: none; 
-      }
+    }
   }
 
   html,
@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   button{
     cursor: pointer;
+    all: unset;
   }
 
   a {
