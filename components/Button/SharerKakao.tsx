@@ -1,7 +1,8 @@
 "use client";
+
+import kakaoLogo from "app/assets/icons/kakaoLogo.png";
 import Image from "next/image";
 import { useEffect } from "react";
-import kakaoLogo from "@/app/assets/icons/kakaoLogo.png";
 import styled from "styled-components";
 
 declare global {
