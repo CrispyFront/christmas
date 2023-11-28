@@ -1,8 +1,8 @@
 "use client";
 
+import useWindowSize from "hooks/useWindowSize";
 import { PropsWithChildren, useEffect } from "react";
 import styled from "styled-components";
-import useWindowSize from "../../hooks/useWindowSize";
 
 let vh = 0;
 

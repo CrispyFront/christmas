@@ -1,12 +1,12 @@
 "use client";
 
-import "globals.css";
+import "app/globals.css";
+import Layout from "components/layout/Layout";
+import GoogleAnalytics from "components/tracking/GoogleAnalytics";
+import Hotjar from "components/tracking/Hotjar";
+import useGAPageView from "hooks/useGAPageView";
 import React from "react";
-import Layout from "../components/layout/Layout";
-import GoogleAnalytics from "../components/tracking/GoogleAnalytics";
-import Hotjar from "../components/tracking/Hotjar";
-import useGAPageView from "../hooks/useGAPageView";
-import GlobalStyle from "../styles/GlobalStyle";
+import GlobalStyle from "styles/GlobalStyle";
 
 export default function RootLayout({
   children,

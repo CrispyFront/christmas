@@ -1,5 +1,5 @@
+import * as gtag from "libs/gtag";
 import Script from "next/script";
-import * as gtag from "../../libs/gtag";
 
 function GoogleAnalytics() {
   return (
