@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_ab7881c6073b773"
   },
   "dependencies": {
+    "@sentry/nextjs": "^7.82.0",
     "next": "14.0.3",
     "npm": "^10.2.4",
     "react": "^18",
@@ -18,6 +20,7 @@
     "styled-components": "^6.1.1"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.5.3",
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
@@ -31,10 +34,14 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/styled-components": "^5.1.32",
+    "chromatic": "^9.1.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "eslint-plugin-storybook": "^0.6.15",
     "storybook": "^7.5.3",
+    "storybook-addon-designs": "^6.3.1",
     "typescript": "^5"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "christmas@1.0.0"
 }
