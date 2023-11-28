@@ -23,6 +23,7 @@ function Layout({ children }: PropsWithChildren) {
 export default Layout;
 
 const StyledWrapper = styled.div<{ $background: string }>`
+  position: relative;
   width: 100%;
   height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
