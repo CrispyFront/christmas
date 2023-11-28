@@ -1,6 +1,6 @@
 "use client";
 
-import BackgroundImg from "assets/images/backgroundImg.png";
+import BackgroundImg from "assets/images/BackgroundImg.png";
 import useWindowSize from "hooks/useWindowSize";
 import { PropsWithChildren, useEffect } from "react";
 import styled from "styled-components";
