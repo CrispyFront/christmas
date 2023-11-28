@@ -13,6 +13,17 @@ const nextConfig = {
         },
       },
     });
+    config.module.rules.push({
+      test: /\.(mp3)$/i,
+      use: [
+        {
+          loader: "url-loader",
+          options: {
+            name: "[name]-[hash].[ext]",
+          },
+        },
+      ],
+    });
 
     return config;
   },
