@@ -1,7 +1,7 @@
 "use client";
-import kakaoLogo from "assets/icons/kakaoLogo.png";
 import Image from "next/image";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import kakaoLogo from "assets/icons/kakaoLogo.png";
 import styled from "styled-components";
 
 declare global {
@@ -10,7 +10,11 @@ declare global {
   }
 }
 
-function SharerKaKao() {
+export interface Size {
+  size: "small" | "medium" | "large";
+}
+
+function SharerKaKao({ size }: Size) {
   const initializeKakao = (script: HTMLScriptElement) => {
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
     script.onload = () => {
@@ -41,24 +45,26 @@ function SharerKaKao() {
   }, []);
 
   return (
-    <StyledWrapper onClick={sharedKakao}>
-      <Image src={kakaoLogo} alt="카카오톡 공유" />
+    <StyledWrapper onClick={sharedKakao} size={size}>
+      <Image fill src={kakaoLogo} alt="카카오톡 공유" />
     </StyledWrapper>
   );
 }
 
 export default SharerKaKao;
 
-const StyledWrapper = styled.button`
+const StyledWrapper = styled.button<Size>`
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  border: 0;
 
-  width: 50px;
-  height: 50px;
+  width: ${({ size }) =>
+    size === "large" ? "80px" : size === "medium" ? "60px" : "40px"};
+  height: ${({ size }) =>
+    size === "large" ? "80px" : size === "medium" ? "60px" : "40px"};
   border-radius: 50%;
   background-color: #ffeb00;
-
+  border: 0;
   cursor: pointer;
 `;
