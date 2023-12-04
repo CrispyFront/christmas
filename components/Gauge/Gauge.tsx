@@ -14,7 +14,7 @@ function Gauge({ type }: HeartState) {
     full: full,
   };
 
-  return <Image src={HeartImg[type]} alt="하트" />;
+  return <Image src={HeartImg[type]} alt="게이지 상태" />;
 }
 
 export default Gauge;
