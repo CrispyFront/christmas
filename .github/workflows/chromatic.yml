@@ -24,10 +24,10 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
       - name: Comment Pull Request
-        uses: thollander/actions-comment-pull-request@v2
+        uses: thollander/actions-comment-pull-request@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           message: |
-            ☃ @${{github.actor}}님의 개발, 스토리북으로 확인하기 ☃️
+            ☃ ${{github.actor}}님의 개발, 스토리북으로 확인하기 ☃️
             - [❄️ storybook](${{ steps.publish_chromatic.outputs.storybookUrl }})
