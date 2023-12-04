@@ -1,9 +1,11 @@
 import { DefaultTheme } from "styled-components";
+import RedButton from "assets/icons/RedButton.svg";
+import GreenButton from "assets/icons/GreenButton.svg";
 
 export const theme: DefaultTheme = {
   btnColor: {
-    red: "assets/icons/GreenButton.svg",
-    green: "assets/icons/RedButton.svg",
+    red: RedButton,
+    green: GreenButton,
   },
 
   fontWeight: {
