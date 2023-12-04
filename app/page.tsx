@@ -4,6 +4,7 @@ import SnowAndTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
 import Image from "next/image";
+import Link from "next/link";
 import { styled } from "styled-components";
 
 function Home() {
@@ -15,7 +16,14 @@ function Home() {
           <StyledGreen>크리마스</StyledGreen>에 뭐하지?
         </StyledTitle>
       </StyledTitleFrame>
-      <StyledStartButton src={StartButton.src} />
+      <Link href="/test">
+        <Image
+          width={170}
+          height={60}
+          src={StartButton.src}
+          alt="스타트 버튼"
+        />
+      </Link>
       <StyledSnowManAndTree src={SnowAndTree} alt="눈사람과 트리" />
     </StyledWrapper>
   );
@@ -32,7 +40,7 @@ const StyledWrapper = styled.div`
 
 const StyledJingleBell = styled.button<{ src: string }>`
   width: 120px;
-  height: 81px;
+  height: 80px;
   margin-top: 50px;
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
@@ -51,9 +59,10 @@ const StyledTitleFrame = styled.div<{ src: string }>`
 
 const StyledTitle = styled.div`
   position: absolute;
+  width: 250px;
   top: 50%;
   left: 50%;
-  transform: translate(-55%, -50%);
+  transform: translate(-52%, -50%);
   font-size: 3rem;
   font-weight: 700;
   text-align: right;
@@ -63,14 +72,6 @@ const StyledTitle = styled.div`
 const StyledGreen = styled.div`
   display: inline;
   color: #468259;
-`;
-
-const StyledStartButton = styled.button<{ src: string }>`
-  width: 200px;
-  height: 81px;
-  background-image: url(${(props) => props.src});
-  background-repeat: no-repeat;
-  background-position: center;
 `;
 
 const StyledSnowManAndTree = styled(Image)`
