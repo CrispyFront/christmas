@@ -1,13 +1,15 @@
 "use client";
 
 import BackgroundImg from "assets/images/BackgroundImg.png";
+import { motion } from "framer-motion";
 import useWindowSize from "hooks/useWindowSize";
 import { PropsWithChildren, useEffect } from "react";
 import styled from "styled-components";
+import { pageEffect } from "styles/pageEffect";
 
 let vh = 0;
 
-function Layout({ children }: PropsWithChildren) {
+function Layout({ children, ...rest }: PropsWithChildren) {
   const windowSize = useWindowSize();
 
   useEffect(() => {
@@ -16,7 +18,16 @@ function Layout({ children }: PropsWithChildren) {
   }, [windowSize.height]);
 
   return (
-    <StyledWrapper $background={BackgroundImg.src}>{children}</StyledWrapper>
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      transition={{ duration: 0.5 }}
+      variants={pageEffect}
+      {...rest}
+    >
+      <StyledWrapper $background={BackgroundImg.src}>{children}</StyledWrapper>
+    </motion.div>
   );
 }
 
