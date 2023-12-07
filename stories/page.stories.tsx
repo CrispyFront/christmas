@@ -3,7 +3,7 @@ import Home from "../app/page";
 
 export default {
   component: Home,
-  title: "Pages/Home",
+  title: "app/Home",
   decorators: [(Story) => <Story />],
 } as Meta;
 
