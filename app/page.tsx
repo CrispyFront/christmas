@@ -75,8 +75,6 @@ const StyledGreen = styled.div`
 
 const StyledSnowManAndTree = styled(Image)`
   position: absolute;
-  width: 188px;
-  height: 175px;
-  bottom: 50px;
+  bottom: 40px;
   right: 2px;
 `;

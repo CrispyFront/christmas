@@ -19,11 +19,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  html,
-  body {
-    background-image: url();
-  }
-
   button{
     border: 0;
     background-color: transparent;
