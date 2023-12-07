@@ -1,4 +1,4 @@
-import METADATA from "constants/METADATA";
+import METADATA from "constants/metadata";
 
 function Meta() {
   return (
