@@ -38,7 +38,7 @@ const StyledWrapper = styled.div`
   gap: 80px;
 
   @media (max-width: 420px) {
-    gap: 50px;
+    gap: 40px;
   }
 `;
 
