@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { css, keyframes, styled } from "styled-components";
 
 function JingleBell() {
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
   const bgmPlayer = useRef<HTMLAudioElement | undefined>(
     typeof Audio !== "undefined" ? new Audio(BGM) : undefined
   );
