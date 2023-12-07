@@ -1,8 +1,8 @@
 "use client";
-import JingleBell from "assets/images/JingleBell.png";
 import SnowAndTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
+import JingleBell from "components/Button/JingleBell";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
@@ -10,7 +10,7 @@ import { styled } from "styled-components";
 function Home() {
   return (
     <StyledWrapper>
-      <StyledJingleBell src={JingleBell.src} />
+      <JingleBell />
       <StyledTitleFrame src={TitleFrame.src}>
         <StyledTitle>
           <StyledGreen>크리스마스</StyledGreen>에 뭐하지?
