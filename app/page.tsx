@@ -13,7 +13,7 @@ function Home() {
       <StyledJingleBell src={JingleBell.src} />
       <StyledTitleFrame src={TitleFrame.src}>
         <StyledTitle>
-          <StyledGreen>크리마스</StyledGreen>에 뭐하지?
+          <StyledGreen>크리스마스</StyledGreen>에 뭐하지?
         </StyledTitle>
       </StyledTitleFrame>
       <Link href="/test">
@@ -59,7 +59,7 @@ const StyledTitleFrame = styled.div<{ src: string }>`
 
 const StyledTitle = styled.div`
   position: absolute;
-  width: 250px;
+  width: 295px;
   top: 50%;
   left: 50%;
   transform: translate(-52%, -50%);
