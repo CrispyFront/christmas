@@ -1,4 +1,5 @@
 "use client";
+
 import kakaoLogo from "assets/icons/kakaoLogo.png";
 import Image from "next/image";
 import { useEffect } from "react";
