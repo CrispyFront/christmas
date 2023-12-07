@@ -1,7 +1,7 @@
 import JingleBell from "components/Button/JingleBell";
 
 export default {
-  title: "Components/Button/JingleBell",
+  title: "components/JingleBell",
   component: JingleBell,
 };
 
