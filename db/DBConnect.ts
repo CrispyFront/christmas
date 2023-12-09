@@ -3,8 +3,7 @@ declare global {
   var mongoose: any;
 }
 
-const MONGODB_URI = process.env.MONGODB_URI!;
-console.log("MONGODB_URI : ", MONGODB_URI);
+const MONGODB_URI = process.env.NEXT_PUBLIC_MONGODB_URI;
 if (!MONGODB_URI) {
   throw new Error(
     "Please define the MONGODB_URI environment variable inside .env.local"
