@@ -1,12 +1,14 @@
 "use client";
-import SnowAndTree from "assets/images/SnowManAndTree.png";
+import SnowManTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
 import JingleBell from "components/Button/JingleBell";
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
+import { SnowTreeEffect } from "styles/SnowTreeEffect";
+import { StartButtonEffect } from "styles/StartButtonEffect";
 
 function Home() {
   return (
@@ -18,19 +20,10 @@ function Home() {
         </StyledTitle>
       </StyledTitleFrame>
       <Link href="/test">
-        <m.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.3,
-            ease: [0, 0.71, 0.2, 1.01],
-            scale: {
-              type: "spring",
-              damping: 7,
-              stiffness: 80,
-              restDelta: 0.001,
-            },
-          }}
+        <StyledStartButton
+          initial={StartButtonEffect.initial}
+          animate={StartButtonEffect.animate}
+          transition={StartButtonEffect.transition}
         >
           <Image
             width={170}
@@ -38,20 +31,15 @@ function Home() {
             src={StartButton.src}
             alt="스타트 버튼"
           />
-        </m.div>
+        </StyledStartButton>
       </Link>
-      <m.div
-        initial={{
-          x: -200,
-          y: 220,
-        }}
-        animate={{
-          x: 200,
-        }}
-        transition={{ duration: 1 }}
+      <StyledImageWrapper
+        initial={SnowTreeEffect.initial}
+        animate={SnowTreeEffect.animate}
+        transition={SnowTreeEffect.transition}
       >
-        <StyledSnowManAndTree src={SnowAndTree} alt="눈사람과 트리" />
-      </m.div>
+        <StyledSnowManTree src={SnowManTree} alt="눈사람과 트리" />
+      </StyledImageWrapper>
     </StyledWrapper>
   );
 }
@@ -92,10 +80,17 @@ const StyledGreen = styled.div`
   color: #468259;
 `;
 
-const StyledSnowManAndTree = styled(Image)`
+const StyledSnowManTree = styled(Image)`
   position: absolute;
   width: 188px;
   height: 175px;
   bottom: 50px;
   right: 2px;
+`;
+
+const StyledStartButton = styled(motion.div)``;
+
+const StyledImageWrapper = styled(motion.div)`
+  position: absolute;
+  bottom: 0;
 `;
