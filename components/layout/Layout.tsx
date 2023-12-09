@@ -1,7 +1,7 @@
 "use client";
 
 import BackgroundImg from "assets/images/BackgroundImg.png";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import useWindowSize from "hooks/useWindowSize";
 import { PropsWithChildren, useEffect } from "react";
 import styled from "styled-components";
@@ -18,7 +18,7 @@ function Layout({ children, ...rest }: PropsWithChildren) {
   }, [windowSize.height]);
 
   return (
-    <motion.div
+    <m.div
       initial="initial"
       animate="in"
       exit="out"
@@ -27,7 +27,7 @@ function Layout({ children, ...rest }: PropsWithChildren) {
       {...rest}
     >
       <StyledWrapper $background={BackgroundImg.src}>{children}</StyledWrapper>
-    </motion.div>
+    </m.div>
   );
 }
 

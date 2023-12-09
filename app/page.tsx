@@ -3,7 +3,7 @@ import SnowAndTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
 import JingleBell from "components/Button/JingleBell";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
@@ -18,7 +18,7 @@ function Home() {
         </StyledTitle>
       </StyledTitleFrame>
       <Link href="/test">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -38,9 +38,9 @@ function Home() {
             src={StartButton.src}
             alt="스타트 버튼"
           />
-        </motion.div>
+        </m.div>
       </Link>
-      <motion.div
+      <m.div
         initial={{
           x: -200,
           y: 220,
@@ -51,7 +51,7 @@ function Home() {
         transition={{ duration: 1 }}
       >
         <StyledSnowManAndTree src={SnowAndTree} alt="눈사람과 트리" />
-      </motion.div>
+      </m.div>
     </StyledWrapper>
   );
 }

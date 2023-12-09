@@ -4,7 +4,7 @@ import Meta from "components/commons/Meta";
 import Layout from "components/layout/Layout";
 import GoogleAnalytics from "components/tracking/GoogleAnalytics";
 import Hotjar from "components/tracking/Hotjar";
-import { AnimatePresence } from "framer-motion";
+import { LazyMotion, domMax } from "framer-motion";
 import useGAPageView from "hooks/useGAPageView";
 import React from "react";
 import GlobalStyle from "styles/GlobalStyle";
@@ -25,9 +25,9 @@ export default function RootLayout({
         <GoogleAnalytics />
         <Hotjar />
         <GlobalStyle />
-        <AnimatePresence>
+        <LazyMotion features={domMax}>
           <Layout>{children}</Layout>
-        </AnimatePresence>
+        </LazyMotion>
       </body>
     </html>
   );
