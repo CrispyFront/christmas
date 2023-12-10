@@ -5,7 +5,7 @@ import { m } from "framer-motion";
 import useWindowSize from "hooks/useWindowSize";
 import { PropsWithChildren, useEffect } from "react";
 import styled from "styled-components";
-import { pageEffect } from "styles/pageEffect";
+import { pageEffect } from "styles/motion/PageEffect";
 
 let vh = 0;
 

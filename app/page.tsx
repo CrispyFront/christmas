@@ -7,8 +7,8 @@ import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
-import { RightSlideEffect } from "styles/RightSlideEffect";
-import { SpringEffect } from "styles/SpringEffect";
+import { RightSlideEffect } from "styles/motion/RightSlideEffect";
+import { SpringEffect } from "styles/motion/SpringEffect";
 
 function Home() {
   return (
@@ -34,7 +34,7 @@ function Home() {
         animate="animate"
         variants={RightSlideEffect}
       >
-        <StyledSnowManTree src={SnowManTree} alt="눈사람과 트리" />
+        <StyledSnowManTree src={SnowManTree} alt="눈사람과 트리" priority />
       </StyledImageWrapper>
     </StyledWrapper>
   );
