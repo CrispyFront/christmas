@@ -3,7 +3,7 @@ import SnowManTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
 import JingleBell from "components/Button/JingleBell";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
@@ -20,14 +20,14 @@ function Home() {
         </StyledTitle>
       </StyledTitleFrame>
       <Link href="/test">
-        <motion.div initial="initial" animate="animate" variants={SpringEffect}>
+        <m.div initial="initial" animate="animate" variants={SpringEffect}>
           <Image
             width={170}
             height={60}
             src={StartButton.src}
             alt="스타트 버튼"
           />
-        </motion.div>
+        </m.div>
       </Link>
       <StyledImageWrapper
         initial="initial"
@@ -84,7 +84,7 @@ const StyledSnowManTree = styled(Image)`
   right: 2px;
 `;
 
-const StyledImageWrapper = styled(motion.div)`
+const StyledImageWrapper = styled(m.div)`
   position: absolute;
   bottom: 0;
 `;
