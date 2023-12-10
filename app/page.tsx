@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
-import { SnowTreeEffect } from "styles/SnowTreeEffect";
-import { StartButtonEffect } from "styles/StartButtonEffect";
+import { RightSlideEffect } from "styles/RightSlideEffect";
+import { SpringEffect } from "styles/SpringEffect";
 
 function Home() {
   return (
@@ -20,23 +20,19 @@ function Home() {
         </StyledTitle>
       </StyledTitleFrame>
       <Link href="/test">
-        <StyledStartButton
-          initial={StartButtonEffect.initial}
-          animate={StartButtonEffect.animate}
-          transition={StartButtonEffect.transition}
-        >
+        <motion.div initial="initial" animate="animate" variants={SpringEffect}>
           <Image
             width={170}
             height={60}
             src={StartButton.src}
             alt="스타트 버튼"
           />
-        </StyledStartButton>
+        </motion.div>
       </Link>
       <StyledImageWrapper
-        initial={SnowTreeEffect.initial}
-        animate={SnowTreeEffect.animate}
-        transition={SnowTreeEffect.transition}
+        initial="initial"
+        animate="animate"
+        variants={RightSlideEffect}
       >
         <StyledSnowManTree src={SnowManTree} alt="눈사람과 트리" />
       </StyledImageWrapper>
@@ -87,8 +83,6 @@ const StyledSnowManTree = styled(Image)`
   bottom: 50px;
   right: 2px;
 `;
-
-const StyledStartButton = styled(motion.div)``;
 
 const StyledImageWrapper = styled(motion.div)`
   position: absolute;
