@@ -1,6 +1,7 @@
 "use client";
 import EmailIcon from "assets/icons/Email.svg";
 import InstagramIcon from "assets/icons/Instagram.svg";
+import { URL } from "constants/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
@@ -8,11 +9,11 @@ import { styled } from "styled-components";
 function Footer() {
   return (
     <StyledWrapper>
-      <StyledEmail href={"/"}>
+      <StyledEmail href={URL.email} target="_blank">
         <Image width={15} height={15} src={EmailIcon.src} alt="이메일 아이콘" />
         forchristmastest@gmail.com
       </StyledEmail>
-      <StyledInstagram>
+      <StyledInstagram href={URL.instagram} target="_blank">
         <Image
           width={15}
           height={15}
@@ -45,9 +46,10 @@ const StyledEmail = styled(Link)`
   align-items: center;
   gap: 5px;
   letter-spacing: 1px;
+  color: #000;
 `;
 
-const StyledInstagram = styled.div`
+const StyledInstagram = styled(Link)`
   display: flex;
   align-items: center;
   gap: 5px;
