@@ -1,4 +1,4 @@
-import SharerKakao from "components/Button/SharerKakao";
+import SharerKakao from "components/Share/ShareKakao";
 
 export default {
   title: "Components/Button/SharerKaKao",

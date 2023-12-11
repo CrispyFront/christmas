@@ -9,12 +9,11 @@ declare global {
     Kakao: any;
   }
 }
-
 export interface Size {
   size: "small" | "medium" | "large";
 }
 
-function SharerKaKao({ size }: Size) {
+function ShareKaKao({ size }: Size) {
   const initializeKakao = (script: HTMLScriptElement) => {
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
     script.onload = () => {
@@ -51,7 +50,7 @@ function SharerKaKao({ size }: Size) {
   );
 }
 
-export default SharerKaKao;
+export default ShareKaKao;
 
 const StyledWrapper = styled.button<Size>`
   display: flex;
