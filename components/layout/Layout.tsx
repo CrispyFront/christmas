@@ -1,15 +1,16 @@
 "use client";
 
 import BackgroundImg from "assets/images/BackgroundImg.png";
+import useGAPageView from "hooks/useGAPageView";
 import useWindowSize from "hooks/useWindowSize";
 import { PropsWithChildren, useEffect } from "react";
 import styled from "styled-components";
 
 let vh = 0;
 
-function Layout({ children }: PropsWithChildren) {
+function Layout({ children, ...rest }: PropsWithChildren) {
   const windowSize = useWindowSize();
-
+  useGAPageView();
   useEffect(() => {
     vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
