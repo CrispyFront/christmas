@@ -1,5 +1,7 @@
+"use client";
+
 import { createGlobalStyle } from "styled-components";
-import { theme } from "./theme";
+import { theme } from "styles/theme";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -25,8 +27,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button{
+    border: 0;
+    background-color: transparent;
     cursor: pointer;
-    all: unset;
   }
 
   a {
