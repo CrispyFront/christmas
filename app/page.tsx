@@ -1,11 +1,14 @@
 "use client";
-import SnowAndTree from "assets/images/SnowManAndTree.png";
+import SnowManTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
 import JingleBell from "components/Button/JingleBell";
+import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
+import { RightSlideEffect } from "styles/motion/RightSlideEffect";
+import { SpringEffect } from "styles/motion/SpringEffect";
 
 function Home() {
   return (
@@ -17,14 +20,22 @@ function Home() {
         </StyledTitle>
       </StyledTitleFrame>
       <Link href="/test">
-        <Image
-          width={170}
-          height={60}
-          src={StartButton.src}
-          alt="스타트 버튼"
-        />
+        <m.div initial="initial" animate="animate" variants={SpringEffect}>
+          <Image
+            width={170}
+            height={60}
+            src={StartButton.src}
+            alt="스타트 버튼"
+          />
+        </m.div>
       </Link>
-      <StyledSnowManAndTree src={SnowAndTree} alt="눈사람과 트리" />
+      <StyledImageWrapper
+        initial="initial"
+        animate="animate"
+        variants={RightSlideEffect}
+      >
+        <StyledSnowManTree src={SnowManTree} alt="눈사람과 트리" priority />
+      </StyledImageWrapper>
     </StyledWrapper>
   );
 }
@@ -36,15 +47,6 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 80px;
-`;
-
-const StyledJingleBell = styled.button<{ src: string }>`
-  width: 120px;
-  height: 80px;
-  margin-top: 50px;
-  background-image: url(${(props) => props.src});
-  background-repeat: no-repeat;
-  background-position: center;
 `;
 
 const StyledTitleFrame = styled.div<{ src: string }>`
@@ -74,10 +76,15 @@ const StyledGreen = styled.div`
   color: #468259;
 `;
 
-const StyledSnowManAndTree = styled(Image)`
+const StyledSnowManTree = styled(Image)`
   position: absolute;
   width: 188px;
   height: 175px;
   bottom: 50px;
   right: 2px;
+`;
+
+const StyledImageWrapper = styled(m.div)`
+  position: absolute;
+  bottom: 0;
 `;

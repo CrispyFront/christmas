@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import React from "react";
 import Layout from "components/layout/Layout";
 import GoogleAnalytics from "components/tracking/GoogleAnalytics";
 import Hotjar from "components/tracking/Hotjar";
 import METADATA from "constants/METADATA";
+import type { Metadata } from "next";
+import React from "react";
 import GlobalStyle from "styles/GlobalStyle";
 
 export const metadata: Metadata = {
