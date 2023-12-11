@@ -1,12 +1,10 @@
 "use client";
 
 import BackgroundImg from "assets/images/BackgroundImg.png";
-import { m } from "framer-motion";
 import useGAPageView from "hooks/useGAPageView";
 import useWindowSize from "hooks/useWindowSize";
 import { PropsWithChildren, useEffect } from "react";
 import styled from "styled-components";
-import { pageEffect } from "styles/motion/PageEffect";
 
 let vh = 0;
 
@@ -19,16 +17,7 @@ function Layout({ children, ...rest }: PropsWithChildren) {
   }, [windowSize.height]);
 
   return (
-    <m.div
-      initial="initial"
-      animate="in"
-      exit="out"
-      transition={{ duration: 0.5 }}
-      variants={pageEffect}
-      {...rest}
-    >
-      <StyledWrapper $background={BackgroundImg.src}>{children}</StyledWrapper>
-    </m.div>
+    <StyledWrapper $background={BackgroundImg.src}>{children}</StyledWrapper>
   );
 }
 
