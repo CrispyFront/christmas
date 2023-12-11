@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-function SharerKaKao() {
+function ShareKaKao() {
   const initializeKakao = (script: HTMLScriptElement) => {
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
     script.onload = () => {
@@ -48,7 +48,7 @@ function SharerKaKao() {
   );
 }
 
-export default SharerKaKao;
+export default ShareKaKao;
 
 const StyledWrapper = styled.button`
   display: flex;
