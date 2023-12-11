@@ -1,6 +1,6 @@
-import empty from "assets/icons/heart/empty.svg";
-import full from "assets/icons/heart/full.svg";
-import half from "assets/icons/heart/half.svg";
+import empty from "assets/icons/EmptyHeart.svg";
+import full from "assets/icons/FullHeart.svg";
+import half from "assets/icons/HalfHeart.svg";
 import Image from "next/image";
 
 interface HeartState {
