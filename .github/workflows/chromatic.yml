@@ -1,0 +1,33 @@
+name: storybook
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  chromatic-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish Chromatic
+        id: publish_chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
+      - name: Comment Pull Request
+        uses: thollander/actions-comment-pull-request@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          message: |
+            ☃ ${{github.actor}}님의 개발, 스토리북으로 확인하기 ☃️
+            - [❄️ storybook](${{ steps.publish_chromatic.outputs.storybookUrl }})
