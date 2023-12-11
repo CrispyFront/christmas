@@ -8,5 +8,5 @@ const meta: Meta<typeof Answer> = {
 
 export default meta;
 
-export const Red = () => <Answer color="red" />;
-export const Green = () => <Answer color="green" />;
+export const Red = () => <Answer color="red" text="Default Text" />;
+export const Green = () => <Answer color="green" text="Default Text" />;
