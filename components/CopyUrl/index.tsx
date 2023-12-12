@@ -3,7 +3,6 @@ import { BASE_URL } from "constants/url";
 import { PropsWithChildren, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-//TODO: modal content 변경
 interface CopyContent {
   url: string;
 }
@@ -24,7 +23,7 @@ function CopyUrl({ url, children }: PropsWithChildren<CopyContent>) {
       <CopyToClipboard text={currentUrl(url)} onCopy={handleCopy}>
         {children}
       </CopyToClipboard>
-      {isCopied && <Modal content="링크가 복사되었어용" />}
+      {isCopied && <Modal content="✔︎ 링크가 복사되었습니다" />}
     </>
   );
 }
