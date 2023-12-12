@@ -1,6 +1,7 @@
 "use client";
 import styled from "styled-components";
 import { useRouter } from "next/navigation";
+
 function Return() {
   const router = useRouter();
 
@@ -17,5 +18,6 @@ const StyledReturn = styled.button`
 
   &:hover {
     background-color: #ffffff;
+    transition: all 1s ease-in-out;
   }
 `;
