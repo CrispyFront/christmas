@@ -10,7 +10,9 @@ let vh = 0;
 
 function Layout({ children, ...rest }: PropsWithChildren) {
   const windowSize = useWindowSize();
+
   useGAPageView();
+
   useEffect(() => {
     vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
