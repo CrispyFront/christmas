@@ -35,6 +35,9 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  a:visited {
+    color: #000;
+  }
 `;
 
 export default GlobalStyle;

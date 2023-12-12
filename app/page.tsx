@@ -3,11 +3,10 @@ import SnowManTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
 import JingleBell from "components/Button/JingleBell";
-import { m } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
-import { RightSlideEffect } from "styles/motion/RightSlideEffect";
 import { SpringEffect } from "styles/motion/SpringEffect";
 
 function Home() {
@@ -19,23 +18,19 @@ function Home() {
           <StyledGreen>크리스마스</StyledGreen>에 뭐하지?
         </StyledTitle>
       </StyledTitleFrame>
-      <Link href="/test">
+      <LazyMotion features={domAnimation}>
         <m.div initial="initial" animate="animate" variants={SpringEffect}>
-          <Image
-            width={170}
-            height={60}
-            src={StartButton.src}
-            alt="스타트 버튼"
-          />
+          <Link href="/test">
+            <Image
+              width={170}
+              height={60}
+              src={StartButton.src}
+              alt="스타트 버튼"
+            />
+          </Link>
         </m.div>
-      </Link>
-      <StyledImageWrapper
-        initial="initial"
-        animate="animate"
-        variants={RightSlideEffect}
-      >
-        <StyledSnowManTree src={SnowManTree} alt="눈사람과 트리" priority />
-      </StyledImageWrapper>
+      </LazyMotion>
+      <StyledSnowManTree src={SnowManTree} alt="눈사람과 트리" priority />
     </StyledWrapper>
   );
 }
@@ -82,9 +77,4 @@ const StyledSnowManTree = styled(Image)`
   height: 175px;
   bottom: 50px;
   right: 2px;
-`;
-
-const StyledImageWrapper = styled(m.div)`
-  position: absolute;
-  bottom: 0;
 `;
