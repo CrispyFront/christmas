@@ -1,4 +1,4 @@
-import MainLogo from "assets/icons/MainLogo.svg";
+import MainLogo from "assets/icons/MainLogo.png";
 
 const METADATA = {
   TITLE: "Christmas Test",
