@@ -61,7 +61,11 @@ const StyledTitleFrame = styled.div<{ src: string }>`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 95% 95%;
-  margin: 100px 0 20px 0;
+  margin-bottom: 50px;
+
+  @media (max-width: 420px) {
+    margin-bottom: 0;
+  }
 `;
 
 const StyledTitle = styled.div`
@@ -89,11 +93,12 @@ const StyledGreen = styled.div`
 `;
 
 const StyledSnowManTree = styled(Image)`
-  margin-left: 15rem;
-  margin-top: 4.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 46px;
 
   @media (max-width: 420px) {
-    margin-left: 8rem;
-    margin-top: 0;
+    margin-bottom: 25px;
   }
 `;
