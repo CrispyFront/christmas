@@ -62,9 +62,11 @@ const rotateBell = keyframes`
 `;
 
 const StyledJingleBell = styled.div<{ src: string; $playing: boolean }>`
+  position: absolute;
+  top: 0;
+  margin-top: 30px;
   width: 120px;
   height: 81px;
-  margin-top: 50px;
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
   background-position: center;
