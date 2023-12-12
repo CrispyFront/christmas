@@ -8,6 +8,8 @@ function useGAPageView() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  if (searchParams === null) return;
+
   useEffect(() => {
     const url = pathname + searchParams.toString();
     pageview(url);
