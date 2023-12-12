@@ -1,3 +1,5 @@
+"use client";
+
 import { createGlobalStyle } from "styled-components";
 import { theme } from "styles/theme";
 
@@ -27,6 +29,9 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+  a:visited {
+    color: #000;
   }
 `;
 
