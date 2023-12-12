@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import kakaoLogo from "assets/icons/kakaoLogo.png";
+import LogoKakao from "assets/icons/LogoKakao.png";
 import styled from "styled-components";
 
 declare global {
@@ -13,7 +13,7 @@ export interface Size {
   size: "small" | "medium" | "large";
 }
 
-function ShareKaKao({ size }: Size) {
+function ShareKakao({ size }: Size) {
   const initializeKakao = (script: HTMLScriptElement) => {
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
     script.onload = () => {
@@ -45,12 +45,12 @@ function ShareKaKao({ size }: Size) {
 
   return (
     <StyledWrapper onClick={sharedKakao} size={size}>
-      <Image fill src={kakaoLogo} alt="카카오톡 공유" />
+      <Image fill src={LogoKakao} alt="카카오톡 공유" />
     </StyledWrapper>
   );
 }
 
-export default ShareKaKao;
+export default ShareKakao;
 
 const StyledWrapper = styled.button<Size>`
   display: flex;
