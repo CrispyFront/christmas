@@ -2,7 +2,6 @@ import { BASE_URL } from "constants/url";
 import LogoFacebook from "assets/icons/LogoFacebook.png";
 import styled from "styled-components";
 import Image from "next/image";
-//TODO: 페이스북 버튼 커스텀 이미지 넣기
 export interface Size {
   size: "small" | "medium" | "large";
 }
