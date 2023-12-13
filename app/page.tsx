@@ -70,7 +70,7 @@ const StyledTitleFrame = styled.div<{ src: string }>`
 
 const StyledTitle = styled.div`
   position: absolute;
-  width: 18rem;
+  width: 288px;
   font-size: 3rem;
   font-weight: 700;
   text-align: right;
@@ -78,7 +78,7 @@ const StyledTitle = styled.div`
 
   @media (max-width: 420px) {
     font-size: 2.6rem;
-    width: 17.2rem;
+    width: 275.2px;
   }
 `;
 
