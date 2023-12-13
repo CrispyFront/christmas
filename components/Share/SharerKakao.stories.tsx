@@ -1,8 +1,8 @@
 import SharerKakao from "components/Share/ShareKakao";
 
 export default {
-  title: "Components/Button/SharerKaKao",
+  title: "Components/Share/SharerKaKao",
   component: SharerKakao,
 };
 
-export const Normal = {};
+export const Default = {};

@@ -2,17 +2,13 @@
 
 import MainIcon from "@/assets/icons/MainIcon.png";
 import Return from "@/components/Button/Return";
-import CopyUrl from "@/components/CopyUrl";
-import ShareFacebook from "@/components/Share/ShareFacebook";
+import ShareButtons from "@/components/Share/ShareButtons";
 import Image from "next/image";
-import { usePathname, useSearchParams } from "next/navigation";
+import useGetURL from "@/hooks/useGetURL";
 import { styled } from "styled-components";
 
 function Result() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const url = pathname + searchParams.toString();
-
+  const url = useGetURL();
   return (
     <StyledWrapper>
       <StyledHeader>
@@ -31,11 +27,8 @@ function Result() {
       </StyledResult>
 
       <StyledButtonWrapper>
-        <CopyUrl url={url}>
-          <button>복사하기</button>
-        </CopyUrl>
         <Return />
-        <ShareFacebook />
+        <ShareButtons url={url} />
       </StyledButtonWrapper>
     </StyledWrapper>
   );
@@ -54,7 +47,7 @@ const StyledHeader = styled.div`
   margin: 5%;
 
   span {
-    color: green;
+    color: #008000;
   }
 `;
 
@@ -68,20 +61,24 @@ const StyledResult = styled.div`
 
 const StyledTitle = styled.p`
   font-size: 40px;
-  color: white;
+  color: #ffffff;
 `;
 
 const StyledSubTitle = styled.p`
   font-size: 20px;
-  color: gray;
+  color: #808080;
 `;
 
 const StyledContent = styled.p`
   font-size: 15px;
-  color: white;
+  color: #ffffff;
   line-height: 1.5;
 `;
 
 const StyledButtonWrapper = styled.div`
-  position: relative;
+  display: flex;
+  position: absolute;
+  bottom: 145px;
+  flex-flow: column;
+  gap: 40px;
 `;
