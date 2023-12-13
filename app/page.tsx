@@ -78,7 +78,7 @@ const StyledTitle = styled.div`
 
   @media (max-width: 420px) {
     font-size: 2.6rem;
-    width: 16rem;
+    width: 17.2rem;
   }
 `;
 
