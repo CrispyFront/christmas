@@ -1,4 +1,5 @@
 import LoadingSpinner from "assets/images/LoadingSpinner.gif";
+import LoadingText from "assets/images/Loading.png";
 import Image from "next/image";
 
 function Loading() {
@@ -11,15 +12,11 @@ function Loading() {
     width: "100%",
     height: "100vh",
   };
-  const StyleP: React.CSSProperties = {
-    color: "#468259",
-    fontSize: "2.5rem",
-  };
 
   return (
     <div style={StyleDiv}>
-      <Image src={LoadingSpinner} alt="로딩 스피너" />
-      <p style={StyleP}>Loading...</p>
+      <Image width={150} height={150} src={LoadingSpinner} alt="로딩 스피너" />
+      <Image width={150} height={150} src={LoadingText} alt="로딩 중" />
     </div>
   );
 }
