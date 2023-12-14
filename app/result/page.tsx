@@ -9,6 +9,7 @@ import { styled } from "styled-components";
 
 function Result() {
   const url = useGetURL();
+  
   return (
     <StyledWrapper>
       <StyledHeader>
