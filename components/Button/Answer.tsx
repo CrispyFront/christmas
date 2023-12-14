@@ -21,7 +21,7 @@ function Answer({ color, text }: Answer) {
 
   return (
     <StyledWrapper onClick={moveNext}>
-      <Image src={ButtonImg[color]} alt="답변 버튼" width="300" />
+      <Image fill src={ButtonImg[color]} alt="답변 버튼" />
       <p>{text}</p>
     </StyledWrapper>
   );
@@ -31,6 +31,8 @@ export default Answer;
 
 const StyledWrapper = styled.div`
   position: relative;
+  width: 300px;
+  height: 109px;
 
   p {
     position: absolute;
@@ -38,5 +40,9 @@ const StyledWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+  }
+  @media (max-width: 420px) {
+    width: 255px;
+    height: 92.7px;
   }
 `;
