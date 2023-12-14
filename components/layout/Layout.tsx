@@ -44,4 +44,5 @@ const StyledWrapper = styled.div<{ $background: string }>`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+  overflow-x: hidden;
 `;
