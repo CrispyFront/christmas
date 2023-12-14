@@ -1,3 +1,4 @@
+import Logo from "assets/icons/Logo.svg";
 import MainLogo from "assets/icons/MainLogo.png";
 
 const METADATA = {
@@ -6,6 +7,7 @@ const METADATA = {
   IMAGE: MainLogo.src,
   URL: "https://christmas-mocha.vercel.app/",
   LOCALE: "ko_KR",
+  ICON: Logo.src,
 };
 
 export default METADATA;
