@@ -3,15 +3,21 @@ import ResultType from "@/components/Text/ResultType";
 import Image from "next/image";
 import styled from "styled-components";
 
-//TODO: 데이터 map 돌기
-function Type() {
+interface Props {
+  title: string;
+  subTitle: string;
+  content: string;
+  img: string;
+}
+
+function Type({ title, subTitle, content, img }: Props) {
   return (
     <StyledWrapper>
       <ResultType
-        img="https://github.com/ChristmasTest/christmas/assets/63100352/97f11aad-849c-4a46-853b-3c9ee8a49d63"
-        title="멋쟁이 루돌프"
-        subTitle="누가 뭐래도 내가 짱 !"
-        content="자존감도 만땅 자신감도 만땅인 당신! 다가오는 크리스마스도 즐겁게 보낼 수 있을 거 같군요. 벌써부터 크리스마스에 입을 옷을 고르고 있나요?"
+        img={img}
+        title={title}
+        subTitle={subTitle}
+        content={content}
       />
       <StyledImgWrapper>
         <Image src={Light} fill alt="전구" />
