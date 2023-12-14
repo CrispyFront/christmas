@@ -99,7 +99,6 @@ const StyledContent = styled.p`
 
   @media (max-width: 420px) {
     font-size: 0.875rem;
-    letter-spacing: 2px;
   }
 `;
 
