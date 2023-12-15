@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer/Footer";
+import { BASE_URL } from "@/constants/url";
 import Layout from "components/layout/Layout";
 import GoogleAnalytics from "components/tracking/GoogleAnalytics";
 import Hotjar from "components/tracking/Hotjar";
@@ -8,7 +9,7 @@ import React from "react";
 import GlobalStyle from "styles/GlobalStyle";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://christmas-mocha.vercel.app"),
+  metadataBase: new URL(BASE_URL),
   title: METADATA.TITLE,
   description: METADATA.DESCRIPTION,
   openGraph: {
