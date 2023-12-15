@@ -9,6 +9,10 @@ const nextConfig = {
   sentry: {
     hideSourceMaps: true,
   },
+  images: {
+    domains: ['user-images.githubusercontent.com', 'localhost', 'github.com'],
+    formats: ['image/avif', 'image/webp'],
+  },
 
   webpack: (config, options) => {
     config.module.rules.push({
@@ -19,18 +23,18 @@ const nextConfig = {
           name: 'fonts/[name].[ext]!static',
         },
       },
-    });
+    })
     config.module.rules.push({
       test: /\.(mp3)$/i,
       use: [
         {
-          loader: "url-loader",
+          loader: 'url-loader',
           options: {
-            name: "[name]-[hash].[ext]",
+            name: '[name]-[hash].[ext]',
           },
         },
       ],
-    });
+    })
     return config
   },
 }

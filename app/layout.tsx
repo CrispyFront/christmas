@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import { BASE_URL } from "@/constants/url";
 import Layout from "components/layout/Layout";
 import GoogleAnalytics from "components/tracking/GoogleAnalytics";
@@ -46,7 +47,10 @@ export default function RootLayout({
         <GoogleAnalytics />
         <Hotjar />
         <GlobalStyle />
-        <Layout>{children}</Layout>
+        <Layout>
+          {children}
+          <Footer />
+        </Layout>
       </body>
     </html>
   );
