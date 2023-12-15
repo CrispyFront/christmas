@@ -61,6 +61,6 @@ const RESULT_IMAGE = [
   },
   {
     title: "오지라퍼 도둑",
-    img: "",
+    img: "https://github.com/ChristmasTest/christmas/assets/63100352/ab3adbb7-936d-450a-9434-13524a4fd8e8",
   },
 ];
