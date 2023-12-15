@@ -6,6 +6,7 @@ export interface Test extends mongoose.Document {
   firstAnswer: string;
   secondAnswer: string;
   rowState: number;
+  imageURL: string;
 }
 
 const TestSchema = new mongoose.Schema<Test>(
@@ -31,6 +32,10 @@ const TestSchema = new mongoose.Schema<Test>(
       type: Number,
       enum: [0, 1, 2], //0 : use , 1 : hide , 2 : delete
       default: 0,
+    },
+    imageURL: {
+      type: String,
+      default: "",
     },
   },
   {
