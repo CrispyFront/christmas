@@ -1,4 +1,5 @@
 "use client";
+
 import JingleBellImg from "assets/images/JingleBell.png";
 import BGM from "assets/music/BGM.mp3";
 import { useRef, useState } from "react";

@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer/Footer";
+import { BASE_URL } from "@/constants/url";
 import Layout from "components/layout/Layout";
 import GoogleAnalytics from "components/tracking/GoogleAnalytics";
 import Hotjar from "components/tracking/Hotjar";
@@ -8,7 +10,7 @@ import GlobalStyle from "styles/GlobalStyle";
 import Loading from "./loading";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://christmas-mocha.vercel.app"),
+  metadataBase: new URL(BASE_URL),
   title: METADATA.TITLE,
   description: METADATA.DESCRIPTION,
   openGraph: {
@@ -48,6 +50,7 @@ export default function RootLayout({
         <GlobalStyle />
         <Suspense fallback={<Loading />}>
           <Layout>{children}</Layout>
+          <Footer />
         </Suspense>
       </body>
     </html>

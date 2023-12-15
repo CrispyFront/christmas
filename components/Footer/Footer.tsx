@@ -29,15 +29,16 @@ function Footer() {
 export default Footer;
 
 const StyledWrapper = styled.div`
-  width: 100%;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  width: 100%;
   bottom: 0;
-  padding: 12px 10px;
+  padding: 12px 5px;
+
   @media (max-width: 420px) {
-    font-size: 13.3px;
+    font-size: 0.8rem;
   }
 `;
 
