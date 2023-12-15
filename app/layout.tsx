@@ -5,8 +5,9 @@ import GoogleAnalytics from "components/tracking/GoogleAnalytics";
 import Hotjar from "components/tracking/Hotjar";
 import METADATA from "constants/METADATA";
 import type { Metadata } from "next";
-import React from "react";
+import React, { Suspense } from "react";
 import GlobalStyle from "styles/GlobalStyle";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -47,10 +48,10 @@ export default function RootLayout({
         <GoogleAnalytics />
         <Hotjar />
         <GlobalStyle />
-        <Layout>
-          {children}
+        <Suspense fallback={<Loading />}>
+          <Layout>{children}</Layout>
           <Footer />
-        </Layout>
+        </Suspense>
       </body>
     </html>
   );

@@ -28,7 +28,9 @@ function Test() {
       </StyledProgressBar>
       <StyledTest>
         <Image src={MainIcon} alt="아이콘" width="300" />
-        <p>당신은... 크리스마스 날 벽난로에서 야생의 산타와 마주쳤습니다.</p>
+        <StyledQuestion>
+          당신은... 크리스마스 날 벽난로에서 야생의 산타와 마주쳤습니다.
+        </StyledQuestion>
       </StyledTest>
       <StyledButton>
         <Answer color="green" text="1번 답" />
@@ -44,6 +46,10 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  @media (max-width: 420px) {
+    width: 80%;
+  }
 `;
 
 const StyledProgressBar = styled.div`
@@ -56,6 +62,14 @@ const StyledTest = styled.div`
   text-align: center;
   line-height: 1.5;
   margin: 10%;
+`;
+
+const StyledQuestion = styled.p`
+  color: #ffffff;
+
+  @media (max-width: 420px) {
+    font-size: 1.763rem;
+  }
 `;
 
 const StyledButton = styled.div`

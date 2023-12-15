@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    background-image: url();
+ 
   }
 
   button{
