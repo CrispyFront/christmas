@@ -1,7 +1,9 @@
 "use client";
 
 import BackgroundImg from "assets/images/BackgroundImg.png";
+import ResultBackgroundImg from "assets/images/ResultBackgroundImg.png";
 import useGAPageView from "hooks/useGAPageView";
+import useGetUrl from "hooks/useGetURL";
 import useWindowSize from "hooks/useWindowSize";
 import { PropsWithChildren, useEffect } from "react";
 import styled from "styled-components";
@@ -9,7 +11,9 @@ import styled from "styled-components";
 let vh = 0;
 
 function Layout({ children, ...rest }: PropsWithChildren) {
+  const location = useGetUrl();
   const windowSize = useWindowSize();
+  let BackgroundImgSrc = BackgroundImg;
 
   useGAPageView();
 
@@ -18,8 +22,12 @@ function Layout({ children, ...rest }: PropsWithChildren) {
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   }, [windowSize.height]);
 
+  if (location === "/result") {
+    BackgroundImgSrc = ResultBackgroundImg;
+  }
+
   return (
-    <StyledWrapper $background={BackgroundImg.src}>{children}</StyledWrapper>
+    <StyledWrapper $background={BackgroundImgSrc.src}>{children}</StyledWrapper>
   );
 }
 
@@ -36,4 +44,5 @@ const StyledWrapper = styled.div<{ $background: string }>`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+  overflow-x: hidden;
 `;
