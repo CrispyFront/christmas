@@ -1,1 +1,1 @@
-export const BASE_URL = "https://christmas-mocha.vercel.app" as const;
+export const BASE_URL = "https://christmas-test.vercel.app/" as const;
