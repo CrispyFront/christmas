@@ -1,4 +1,5 @@
 "use client";
+
 import EmailIcon from "assets/icons/Email.svg";
 import InstagramIcon from "assets/icons/Instagram.svg";
 import { URL } from "constants/Footer";
@@ -54,4 +55,5 @@ const StyledInstagram = styled(Link)`
   display: flex;
   align-items: center;
   gap: 5px;
+  color: #000;
 `;

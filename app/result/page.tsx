@@ -3,13 +3,14 @@
 import MainIcon from "@/assets/icons/MainIcon.png";
 import Return from "@/components/Button/Return";
 import ShareButtons from "@/components/Share/ShareButtons";
+import CategoryByType from "@/components/Text/CategoryByType";
 import useGetURL from "@/hooks/useGetURL";
 import Image from "next/image";
 import { styled } from "styled-components";
 
 function Result() {
   const url = useGetURL();
-  
+
   return (
     <StyledWrapper>
       <StyledHeader>
@@ -31,6 +32,13 @@ function Result() {
           다가오는 크리스마스도 즐겁게 보낼 수 있을 거 같군요. 벌써부터
           크리스마스에 입을 옷을 고르고 있나요?
         </StyledContent>
+        <StyledCategoryWrapper>
+          <CategoryByType title="같이 보낼 유형" character="난죽택 마시멜로" />
+          <CategoryByType
+            title="같이 보내면 안될 유형"
+            character="조공폭발 김산타"
+          />
+        </StyledCategoryWrapper>
       </StyledResult>
 
       <StyledButtonWrapper>
@@ -108,4 +116,11 @@ const StyledButtonWrapper = styled.div`
   flex-flow: column;
   gap: 40px;
   margin-bottom: 50px;
+`;
+
+const StyledCategoryWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 25px 0;
 `;
