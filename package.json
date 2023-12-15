@@ -16,8 +16,9 @@
   },
   "dependencies": {
     "@sentry/nextjs": "^7.82.0",
-    "mongoose": "^8.0.3",
+    "axios": "^1.6.2",
     "framer-motion": "^10.16.14",
+    "mongoose": "^8.0.3",
     "next": "^14.0.3",
     "npm": "^10.2.4",
     "react": "^18",
