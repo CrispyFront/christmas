@@ -41,19 +41,19 @@ const RESULT_IMAGE = [
   },
   {
     title: "고래 싸움에 새우등 터지는 썰매",
-    img: "",
+    img: "https://github.com/ChristmasTest/christmas/assets/63100352/0b40a31c-f8e9-4476-9b49-e52f031ca45b",
   },
   {
     title: "짠돌이 산타",
-    img: "",
+    img: "https://github.com/ChristmasTest/christmas/assets/63100352/13de5af2-eba1-4db8-af9f-8cf5fb52a334",
   },
   {
     title: "괴짜 과학자 산타",
-    img: "",
+    img: "https://github.com/ChristmasTest/christmas/assets/63100352/5ff3718a-8dd9-413e-b313-0822900aa321",
   },
   {
     title: "사이비교주 모닥불",
-    img: "",
+    img: "https://github.com/ChristmasTest/christmas/assets/63100352/29532503-a952-4aec-93d9-0c22efc4043a",
   },
   {
     title: "정보통 징글벨",
