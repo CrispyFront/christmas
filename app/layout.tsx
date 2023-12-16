@@ -1,5 +1,4 @@
 import Loading from "app/loading";
-import Footer from "components/Footer";
 import Layout from "components/layout/Layout";
 import GoogleAnalytics from "components/tracking/GoogleAnalytics";
 import Hotjar from "components/tracking/Hotjar";
@@ -49,10 +48,7 @@ export default function RootLayout({
         <Hotjar />
         <GlobalStyle />
         <Suspense fallback={<Loading />}>
-          <Layout>
-            {children}
-            <Footer />
-          </Layout>
+          <Layout>{children}</Layout>
         </Suspense>
       </body>
     </html>

@@ -19,13 +19,14 @@ function Return({ title, link }: Props) {
 export default Return;
 
 const StyledReturn = styled.button`
-  border: 1px solid #468259;
+  border: 2px solid #468259;
   border-radius: 15px;
   font-size: 1.25rem;
   width: 200px;
   height: 55px;
   padding: 10px;
   color: #468259;
+  background-color: #ffffff;
 
   @media (max-width: 420px) {
     font-size: 1.12rem;
@@ -33,7 +34,7 @@ const StyledReturn = styled.button`
   }
 
   &:hover {
-    background-color: #ffffff;
+    font-size: 1.3rem;
     transition: all 0.2s ease-in-out;
   }
 `;

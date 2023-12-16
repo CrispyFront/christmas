@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "components/Footer";
 import SnowManTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
@@ -35,7 +36,9 @@ function Home() {
           </Link>
         </m.div>
       </LazyMotion>
+
       <StyledSnowManTree src={SnowManTree} alt="눈사람과 트리" priority />
+      <Footer />
     </StyledWrapper>
   );
 }

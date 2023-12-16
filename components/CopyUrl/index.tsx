@@ -15,7 +15,7 @@ function CopyUrl({ url, children }: PropsWithChildren<CopyContent>) {
 
     setTimeout(() => {
       setIsCopied(false);
-    }, 2000);
+    }, 1400);
   };
 
   return (
