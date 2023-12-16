@@ -29,7 +29,7 @@ export default Gauge;
 
 const StyledGauge = styled(Image)`
   @media (max-width: 420px) {
-    width: 48px;
-    height: 46px;
+    width: 44px;
+    height: 42px;
   }
 `;

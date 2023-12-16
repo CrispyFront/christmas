@@ -1,5 +1,5 @@
-import { BASE_URL } from "@/constants/url";
 import MainLogo from "assets/icons/MainLogo.png";
+import { BASE_URL } from "constants/url";
 
 const METADATA = {
   TITLE: "Christmas Test",

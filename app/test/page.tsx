@@ -1,10 +1,11 @@
 "use client";
-import { useSearchParams } from "next/navigation";
-import Gauge from "@/components/Gauge/Gauge";
-import Answer from "@/components/Button/Answer";
-import MainIcon from "@/assets/icons/MainIcon.png";
-import { styled } from "styled-components";
+
+import MainIcon from "assets/icons/MainIcon.png";
+import Answer from "components/Button/Answer";
+import Gauge from "components/Gauge/Gauge";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+import { styled } from "styled-components";
 
 function Test() {
   const PageNum = Number(useSearchParams().get("page"));
@@ -47,6 +48,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto;
+
   @media (max-width: 420px) {
     width: 80%;
   }
@@ -58,17 +60,21 @@ const StyledProgressBar = styled.div`
 
 const StyledTest = styled.div`
   color: white;
-  font-size: 30px;
+  font-size: 1.6rem;
   text-align: center;
   line-height: 1.5;
-  margin: 10%;
+  margin: 30px;
+
+  @media (max-width: 420px) {
+    margin: 10px;
+  }
 `;
 
 const StyledQuestion = styled.p`
-  color: #ffffff;
+  color: white;
 
   @media (max-width: 420px) {
-    font-size: 1.763rem;
+    font-size: 1.55rem;
   }
 `;
 

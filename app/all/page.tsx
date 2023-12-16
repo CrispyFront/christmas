@@ -1,6 +1,6 @@
 "use client";
 
-import Type from "@/components/Card/Type";
+import Type from "components/Card/Type";
 import { useRouter } from "next/navigation";
 import { styled } from "styled-components";
 
@@ -10,6 +10,11 @@ function All() {
 
   return (
     <StyledWrapper>
+      <StyledHeader>
+        <p>
+          <span>크리스마스</span>에 뭐하지?
+        </p>
+      </StyledHeader>
       <StyledInWrapper>
         <Type
           img="https://github.com/ChristmasTest/christmas/assets/63100352/97f11aad-849c-4a46-853b-3c9ee8a49d63"
@@ -35,6 +40,15 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+`;
+
+const StyledHeader = styled.div`
+  color: white;
+  margin: 5%;
+
+  span {
+    color: #008000;
+  }
 `;
 
 const StyledInWrapper = styled.div`

@@ -1,5 +1,5 @@
-import LoadingSpinner from "assets/images/LoadingSpinner.gif";
 import LoadingText from "assets/images/Loading.png";
+import LoadingSpinner from "assets/images/LoadingSpinner.gif";
 import Image from "next/image";
 
 function Loading() {
