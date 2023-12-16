@@ -1,10 +1,10 @@
 "use client";
 
-import MainIcon from "@/assets/icons/MainIcon.png";
-import Return from "@/components/Button/Return";
-import ShareButtons from "@/components/Share/ShareButtons";
-import CategoryByType from "@/components/Text/CategoryByType";
-import useGetURL from "@/hooks/useGetURL";
+import MainIcon from "assets/icons/MainIcon.png";
+import Return from "components/Button/Return";
+import ShareButtons from "components/Share/ShareButtons";
+import CategoryByType from "components/Text/CategoryByType";
+import useGetURL from "hooks/useGetURL";
 import Image from "next/image";
 import { styled } from "styled-components";
 
@@ -15,7 +15,7 @@ function Result() {
     <StyledWrapper>
       <StyledHeader>
         <p>
-          <span>크리스마스에</span> 뭐하지?
+          <span>크리스마스</span>에 뭐하지?
         </p>
       </StyledHeader>
       <StyledResult>
@@ -32,18 +32,22 @@ function Result() {
           다가오는 크리스마스도 즐겁게 보낼 수 있을 거 같군요. 벌써부터
           크리스마스에 입을 옷을 고르고 있나요?
         </StyledContent>
+
         <StyledCategoryWrapper>
           <CategoryByType title="같이 보낼 유형" character="난죽택 마시멜로" />
           <CategoryByType
-            title="같이 보내면 안될 유형"
+            title="보내면 안될 유형"
             character="조공폭발 김산타"
           />
         </StyledCategoryWrapper>
       </StyledResult>
 
       <StyledButtonWrapper>
-        <Return />
         <ShareButtons url={url} />
+        <StyledReturnWrapper>
+          <Return title="다시하기" link="/" />
+          <Return title="모든 결과 보기" link="/all" />
+        </StyledReturnWrapper>
       </StyledButtonWrapper>
     </StyledWrapper>
   );
@@ -71,7 +75,7 @@ const StyledResult = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  padding: 30% 10%;
+  padding: 20% 10%;
   text-align: center;
 `;
 
@@ -114,13 +118,20 @@ const StyledContent = styled.p`
 const StyledButtonWrapper = styled.div`
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
 `;
 
 const StyledCategoryWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin: 25px 0;
+  justify-content: space-between;
+  margin-top: 100px;
+`;
+
+const StyledReturnWrapper = styled.div`
+  display: flex;
+  gap: 20px;
 `;

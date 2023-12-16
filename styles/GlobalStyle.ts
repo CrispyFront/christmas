@@ -16,14 +16,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'NeoDunggeunmo';
+
     &::-webkit-scrollbar {
       display: none; 
     }
-  }
-
-  html,
-  body {
- 
   }
 
   button{
@@ -35,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  
   a:visited {
     color: #000;
   }

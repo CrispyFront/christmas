@@ -1,13 +1,13 @@
-import Footer from "@/components/Footer/Footer";
-import { BASE_URL } from "@/constants/url";
+import Loading from "app/loading";
+import Footer from "components/Footer";
 import Layout from "components/layout/Layout";
 import GoogleAnalytics from "components/tracking/GoogleAnalytics";
 import Hotjar from "components/tracking/Hotjar";
 import METADATA from "constants/METADATA";
+import { BASE_URL } from "constants/url";
 import type { Metadata } from "next";
 import React, { Suspense } from "react";
 import GlobalStyle from "styles/GlobalStyle";
-import Loading from "./loading";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -49,8 +49,10 @@ export default function RootLayout({
         <Hotjar />
         <GlobalStyle />
         <Suspense fallback={<Loading />}>
-          <Layout>{children}</Layout>
-          <Footer />
+          <Layout>
+            {children}
+            <Footer />
+          </Layout>
         </Suspense>
       </body>
     </html>

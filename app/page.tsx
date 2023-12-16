@@ -1,4 +1,5 @@
 "use client";
+
 import SnowManTree from "assets/images/SnowManAndTree.png";
 import StartButton from "assets/images/Start.png";
 import TitleFrame from "assets/images/TitleFrame.png";
