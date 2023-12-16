@@ -1,3 +1,4 @@
+import Logo from "assets/icons/Logo.svg";
 import MainLogo from "assets/icons/MainLogo.png";
 import { BASE_URL } from "constants/url";
 
@@ -7,6 +8,7 @@ const METADATA = {
   IMAGE: MainLogo.src,
   URL: BASE_URL,
   LOCALE: "ko_KR",
+  ICON: Logo.src,
 };
 
 export default METADATA;
