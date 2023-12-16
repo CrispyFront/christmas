@@ -40,9 +40,11 @@ const StyledWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    width: 80%;
+    line-height: 1.5;
   }
+
   @media (max-width: 420px) {
-    width: 255px;
-    height: 92.7px;
+    width: 300px;
   }
 `;
