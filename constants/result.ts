@@ -1,66 +1,178 @@
-const RESULT_IMAGE = [
+export const RESULT_IMAGE = [
   {
+    mbti: "ENTJ",
     title: "독불장군 눈사람",
+    subTitle: "음하하! 장군 나가신다!",
+    equalMbti1: "난죽택 마시멜로",
+    equalMbti2: "사아비교주 모닥불",
+    notEqualMbti: "오지라퍼 도둑",
+    content:
+      "파티의 진정한 리더, 눈사람 씨! ☃️ 당신의 말 한마디에 모두가 이목을 집중합니다. 파티를 최대한 효율적으로 보내려고 여러 가지 계획을 짰는데, 이곳 저곳에서 싸우느라 난리가 났네요.이번 크리스마스를 완벽하게 보내기 위해, 오늘도 부지런히 싸움을 말리러 갑니다! 비록 올해는 어지럽지만, 내년에는 분명 완벽한 파티가 될 거예요!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/d4349904-21d1-45db-bfed-47f76783de79",
   },
   {
+    mbti: "ENFP",
     title: "조공폭발 김산타",
+    subTitle: "모두의 마니또",
+    equalMbti1: "굴뚝 속의 고독한 선물",
+    equalMbti2: "괴짜 과학자 산타",
+    notEqualMbti: "루돌프인 척하는 북극곰",
+    content:
+      "놀기를 좋아하는 인싸중에 인싸인 당신은 “조공폭발 김산타”! 🎅🏻 각종 모임이나 파티를 좋아하는 당신은 오늘 있을 크리스마스 파티가 너무 기대돼요. 캐롤에 맞춰 요즘 유행하는 릴스를 찍고 제일 신나게 놀 계획이시군요. 친구들에게 선물을 나눠주신다구요? 정말 친절하시네요. 🎁 이렇게 놀 수 있어서 행복한 당신, 올해의 크리스마스는 당신의 것이 될 거에요!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/5140b4e1-4c13-4048-ac8e-2b1023be46c9",
   },
   {
+    mbti: "ISFP",
     title: "루돌프인 척하는 북극곰",
+    subTitle: "눈치는 없지만 착해요",
+    equalMbti1: "인생을 즐기는 진저맨",
+    equalMbti2: "오지라퍼 도둑",
+    notEqualMbti: "조공폭팔 김산타",
+    content:
+      "북극에서 외로운 시간을 보내던 당신. 이번에는 큰맘 먹고 루돌프인 척 크리스마스 파티에 참여하기로 합니다! 🐻‍❄️ 다정한 당신은 역시나 알래스카의 귀한 참치를 들고 오셨네요. 모닥불이 속살거리는 말에 홀리기도 하고, 새우등 터지는 썰매를 돕기도 하고,,, 이번 파티에서 이리저리 치이시겠네요! 그래도 분명 재미는 있을 거예요! ❄️",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/2e8a8d91-bbf6-4753-a353-1523ec6703e8",
   },
   {
+    mbti: "INFP",
     title: "난죽택 마시멜로",
+    subTitle: "혼자가 편해요",
+    equalMbti1: "아낌없이 주는 트리",
+    equalMbti2: "독불장군 눈사람",
+    notEqualMbti: "속으로 침 뱉는 미스터 루",
+    content:
+      "집에서 혼자 쉬고 싶었지만 썰매의 간곡한 부탁에 파티에 참여하게 되었어요.. 사실은 크리스마스에 대한 낭만이 조금은 마음속에 남아있던 걸지도요?🤔 하지만… 파티가 생각대로 흘러가지 않네요. 정신 차려보니 싸움을 말리느라 진땀이 다 빠지고… 너무 힘이 듭니다… 결국 스스로 코코아에 들어가는 당신. 걱정 마세요, 그래도 이 안은 따뜻하니까요.. ☕️",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/145cc784-7ad3-4b00-9e8f-df5620ccaf6d",
   },
   {
+    mbti: "ENTP",
     title: "자아도취 리스",
+    subTitle: "모두의 친구",
+    equalMbti1: "굴뚝 속의 고독한 선물",
+    equalMbti2: "괴짜 과학자 산타",
+    notEqualMbti: "팩트 폭격기 귤",
+    content:
+      "앞에서 새로운 사람들을 반겨주는 당신! 👋🏻 덕분에 새로운 북극곰도, 도둑도 기쁘게 파티에 참여하게 되었어요. 파티가 시작하기에 앞서, 북극곰 머리 위에 슬쩍 루돌프 머리띠를 얹어주는 모습이, 꽤나 다정하네요. 어머, 진저맨 발에 슬쩍 불을 붙였군요! 불장난은 하면 안 돼요 리스씨~!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/98f9a47d-39d0-4018-90a4-3bfe2f2ab8a9",
   },
   {
+    mbti: "ENFJ",
     title: "아낌없이 주는 트리",
+    subTitle: "이것도 주고, 저것도 주고",
+    equalMbti1: "조공폭팔 김산타",
+    equalMbti2: "굴뚝 속의 고독한 선물",
+    notEqualMbti: "인생을 즐기는 진저맨",
+    content:
+      "크리스마스 파티에 가는 당신, 다른 친구들은 뭘 챙겨오는지 궁금한 게 많아요! 👀 모두가 친해지길 바라는 마음에, 처음 보는 도둑에게 가서 말을 먼저 거시네요. 선입견 없는 당신 덕에 친구들의 경계심이 풀어집니다. 성격이 좋아서 이 크리스마스가 끝나면 팬레터가 많이 들어올 거 같군요! 💌 이대로 모두가 평화로운 크리스마스가 되길 바라는 당신, 아낌없이 주는 만큼 행복한 크리스마스가 될 거에요!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/87419c0f-3708-4f29-9b28-7a6683fbdfc9",
   },
   {
+    mbti: "ESTP",
     title: "인생을 즐기는 진저맨",
+    subTitle: "인생은 진저맨처럼",
+    equalMbti1: "고래 싸움에 새우등 터지는 썰매",
+    equalMbti2: "짠돌이 산타",
+    notEqualMbti: "난죽택 마시멜로",
+    content:
+      "인생을 즐기는 당신, 발등에 불이 붙었지만 오히려 그걸 유머로 쓰고 있군요. 당신 덕에 파티가 한층 뜨거워집니다. 🔥 너덜너덜해진 산타와 루돌프도, 잠시 멈추고 당신의 불을 구경하고 있어요. 친구들의 시선에 몸이 구워지고 있는데도 이 순간을 즐기게 되네요. 크리스마스를 백프로 즐기는 건 좋지만, 친구들 몸에는 불을 붙이면 안됩니다~",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/53d71a64-841e-48a7-a806-397d7bb4cd33",
   },
   {
+    mbti: "ISTP",
     title: "속으로 침 뱉는 미스터 루",
+    subTitle: "사회생활 만렙",
+    equalMbti1: "오지라퍼 도둑",
+    equalMbti2: "팩트 폭격기 귤",
+    notEqualMbti: "굴뚝 속의 고독한 선물",
+    content:
+      "어휴 집에서 쉬고 싶었는데, 망할 산타가 억지로 파티에 불렀어요! 😫 하루 종일 선물을 날랐는데, 정말 짜증 나네요! 크리스마스라고 유난 떠는 동물들이 이해되지 않지만.. 사회생활이니 어쩌겠어요. 나 대신 산타 욕해주는 귤 뒤에서 조금만 더 버텨봅시다. ^u^…",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/7ae00a93-2dae-4224-8e48-17a9e1d2a04f",
   },
   {
+    mbti: "ESTJ",
     title: "팩트폭격기 귤",
+    subTitle: "난 참지 않아~",
+    equalMbti1: "루돌프인 척하는 북극곰",
+    equalMbti2: "속으로 침 뱉는 미스터 루",
+    notEqualMbti: "난죽택 마시멜로",
+    content:
+      "불 같은 성격의 귤씨, 오늘도 참지 못하고 디스랩을 하고 계시군요! 🔥 디테일한 당신의 지적에 참지 못한 마시멜로가 눈물과 함께 코코아 속으로 가라앉아 버립니다… 이 자리가 재미없는 미스터 루는 당신의 얘기에 매우 즐거워하고 있네요. 확실히 현실적으로 리더십이 가득한 목소리에, 사람들이 삼삼오오 모이고 있어요. 그렇지만 조심하세요! 누군가의 불만으로 다음 파티에 초대받지 못할 수 있으니까요. 🤫",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/2dd214ca-535e-4eb7-bdc0-564d15351ed0",
   },
   {
+    mbti: "INFJ",
     title: "굴뚝 속의 고독한 선물",
+    subTitle: "혼자가 편해요",
+    equalMbti1: "조공폭팔 김산타",
+    equalMbti2: "자아도취 리스",
+    notEqualMbti: "정보통 징글벨",
+    content:
+      "지붕에서 지켜보니, 오늘 파티는 꽤나 시끄러울 것 같군요. 통찰력 있는 당신은 굴뚝에서 시간을 좀 보내다 들어가기로 합니다 👀 가까이에서 보면 비극, 멀리서 보면 희극이라고, 굴뚝에서 보니 나름 즐거운 파티처럼 보이네요. 역시 오늘은 눈사람의 눈을 피한 게 좋은 선택이었다고 생각이 듭니다. 다들 메리 크리스마스!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/59d8f3d7-48f1-4010-a54c-8c7df1d0f014",
   },
   {
+    mbti: "ISFJ",
     title: "고래 싸움에 새우등 터지는 썰매",
+    subTitle: "잘못 없지만 있어(?)",
+    equalMbti1: "정보통 징글벨",
+    equalMbti2: "인생을 즐기는 진저맨",
+    notEqualMbti: "조공폭팔 김산타",
+    content:
+      "어린이들의 행복을 위해 무상으로 산타와 루돌프를 도운 당신, 사려 깊은 썰매시군요! 😎 그래서일까요? 오늘도 둘 사이의 싸움에 휘말려 버렸어요. 조금은 힘이 들지만.. 오래 본 사이인 산타와 루돌프를 위해 중재하려 최대한 노력해 봅니다. 그래도 나중에 돌아보면, 다 추억이 되겠죠?",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/0b40a31c-f8e9-4476-9b49-e52f031ca45b",
   },
   {
+    mbti: "ISTJ",
     title: "짠돌이 산타",
+    subTitle: "티끌 모아 태산",
+    equalMbti1: "정보통 징글벨",
+    equalMbti2: "인생을 즐기는 진저맨",
+    notEqualMbti: "아낌없이 주는 트리",
+    content:
+      "이런 이런, 이번 연말에도 열심히 함께 뛴 루돌프들에게 일급 챙겨주기가 아까우시다구요? 그러한 당신은 “짠돌이 산타”! 🎅🏻💸 크리스마스에는 역시 푹~ 쉬고 가족들과 시간을 보내는 게 좋다고 생각하시는 군요. 정리정돈을 잘하시는 당신, 방도 미리 예쁘게 꾸며두셨네요. 이번 연말, 본인에게 맞게 따뜻하고 평화로운 시간이 되겠어요!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/13de5af2-eba1-4db8-af9f-8cf5fb52a334",
   },
   {
+    mbti: "INTJ",
     title: "괴짜 과학자 산타",
+    subTitle: "정말 괜찮군요~ (하이머딩거)",
+    equalMbti1: "조공폭팔 김산타",
+    equalMbti2: "자아도취 리스",
+    notEqualMbti: "고래 싸움에 새우등 터지는 썰매",
+    content:
+      "크리스마스 파티에 초대받은 당신, 파티의 일정표가 체계적이라 맘에 쏙 든다구요? 점찍어 둔 사람이 있다구요? 돈독해지려고 노력할 모습이 보이네요 호기심이 강한 당신, 혼자만의 시간을 보내고 싶었지만 결국 파티에 참여하게 되었어요! 와인에 이상한 물약을 타다가 터뜨려서 썰매가 흘겨보네요. 하지만 상관없어요! 저렇게 소신 없이 끌려다니는 썰매가 하는 얘기는 전혀 중요하지 않으니까요. 그보다는 좋은 시도라 칭찬해주는 리스의 말에 어깨가 으쓱 올라갑니다. 역시 오길 잘했네요! 생각보다 재미있어요!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/5ff3718a-8dd9-413e-b313-0822900aa321",
   },
   {
+    mbti: "INTP",
     title: "사이비교주 모닥불",
+    subTitle: "마냥 조용한 친구, 하지만...",
+    equalMbti1: "독불장군 눈사람",
+    equalMbti2: "팩트 폭격기 귤",
+    notEqualMbti: "난죽택 마시멜로",
+    content:
+      "조용하고 과묵한 당신. 오늘은 얌전히 구경하려 했으나 관심 있는 분야에 대한 이야기가 나오자 참지 못하셨군요! 🤩 분명 사실이 아닌 이야기 같은데.. 재미있는지 은근히 당신 말에 홀리는 친구들이 몇몇 보이네요. 분위기에 안 맞게 불에 소주 좀 그만 부으세요~!! 와인을 잔뜩 준비한 눈사람이 슬프겠어요.",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/29532503-a952-4aec-93d9-0c22efc4043a",
   },
   {
+    mbti: "ESFP",
     title: "정보통 징글벨",
+    subTitle: "다 물어봐",
+    equalMbti1: "고래 싸움에 새우등 터지는 썰매",
+    equalMbti2: "짠돌이 산타",
+    notEqualMbti: "아낌없이 주는 트리",
+    content:
+      "이 파티에 오는 친구들의 모든 신상을 꿰뚫고 있는 당신. 부드럽고 친절한 성격 덕에 쉽게 신임을 얻는군요. 그렇지만 그런 당신도 독불장군 눈사람은 참기 힘든가보네요. 눈사람을 피해 파티 이곳저곳을 누빕니다. 오늘도 당신의 벨소리가 파티를 밝은 분위기로 이끌어주네요! 🔔 뛰어다니다가 선물 놓치지 않게 조심하세요!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/b4fee5bd-0cd8-43fd-8fa9-b15cf7343883",
   },
   {
+    mbti: "ESFJ",
     title: "오지라퍼 도둑",
+    subTitle: "모든 일에 관심 갖는 나",
+    equalMbti1: "루돌프인 척하는 북극곰",
+    equalMbti2: "속으로 침 뱉는 미스터 루",
+    notEqualMbti: "조공폭팔 김산타",
+    content:
+      "당신은 사교적이고 주변사람을 배려하는 성격을 가진 ‘오지라퍼 도둑’이군요! 🥷🏻 얼른 도망가야 하는데, 굴뚝에 껴버린 루돌프를 외면하지 못했어요… 걱정 마세요! 루돌프가 감사 인사로 파티에 초대해 드릴 테니까요. 산타에게서 훔쳐온 선물로 선물 교환식에 참여하다, 들켜서 도망가는 모습이 보이네요! 이번 파티, 잘 몰라도 그냥 평소처럼 고개를 끄덕인다면 제대로 즐길 수 있을 거예요!",
     img: "https://github.com/ChristmasTest/christmas/assets/63100352/ab3adbb7-936d-450a-9434-13524a4fd8e8",
   },
 ];
