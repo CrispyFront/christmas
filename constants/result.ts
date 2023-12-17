@@ -1,4 +1,4 @@
-export const RESULT_IMAGE = [
+export const TEST_RESULT = [
   {
     mbti: "ENTJ",
     title: "독불장군 눈사람",
