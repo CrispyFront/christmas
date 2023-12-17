@@ -77,10 +77,10 @@ function Test() {
     //console.log(type + " " + resultMap.get(type)!);
 
     if (NextNum === 12) {
-      const src = "http://localhost:3000/result";
+      const src = "https://christmas-test.vercel.app/result";
       router.push(src);
     } else {
-      const src = "http://localhost:3000/test/?page=" + NextNum;
+      const src = "https://christmas-test.vercel.app/test/?page=" + NextNum;
       router.push(src);
     }
   };
