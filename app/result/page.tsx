@@ -64,7 +64,6 @@ function Result() {
           />
         </StyledCategoryWrapper>
       </StyledResult>
-
       <StyledButtonWrapper>
         <ShareButtons url={url} />
         <StyledReturnWrapper>
@@ -103,10 +102,8 @@ const StyledResult = styled.div`
 `;
 
 const StyledResultImg = styled(Image)`
-  @media (max-width: 420px) {
-    width: 95%;
-    height: auto;
-  }
+  width: 80%;
+  height: auto;
 `;
 
 const StyledTitle = styled.p`
@@ -136,6 +133,10 @@ const StyledContent = styled.p`
   @media (max-width: 420px) {
     font-size: 0.875rem;
   }
+
+  @media (min-width: 430px) {
+    width: 80%;
+  }
 `;
 
 const StyledButtonWrapper = styled.div`
@@ -152,6 +153,12 @@ const StyledCategoryWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 50px;
+
+  @media (min-width: 430px) {
+    width: 30%;
+    position: relative;
+    left: -155px;
+  }
 `;
 
 const StyledReturnWrapper = styled.div`
