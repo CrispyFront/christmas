@@ -1,8 +1,8 @@
-import CopyUrl from "@/components/CopyUrl";
-import ShareFacebook from "@/components/Share/ShareFacebook";
-import ShareKakao from "@/components/Share/ShareKakao";
-import Image from "next/image";
 import LogoCopay from "assets/icons/LogoCopy.png";
+import CopyUrl from "components/CopyUrl";
+import ShareFacebook from "components/Share/ShareFacebook";
+import ShareKakao from "components/Share/ShareKakao";
+import Image from "next/image";
 import styled from "styled-components";
 
 interface ShareContent {

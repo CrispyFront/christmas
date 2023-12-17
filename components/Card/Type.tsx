@@ -1,5 +1,5 @@
-import Light from "@/assets/images/Light.png";
-import ResultType from "@/components/Text/ResultType";
+import Light from "assets/images/Light.png";
+import ResultType from "components/Text/ResultType";
 import Image from "next/image";
 import styled from "styled-components";
 
