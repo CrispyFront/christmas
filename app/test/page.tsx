@@ -169,6 +169,7 @@ const StyledTest = styled.div`
 
 const StyledQuestion = styled.p`
   color: white;
+  word-break: keep-all;
 
   @media (max-width: 420px) {
     font-size: 1.55rem;

@@ -39,6 +39,7 @@ const StyledWrapper = styled.div`
     color: white;
     width: 80%;
     line-height: 1.5;
+    word-break: keep-all;
   }
 
   @media (max-width: 420px) {
