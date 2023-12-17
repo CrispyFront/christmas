@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { getByTypeTestCase } from "@/libs/api";
 import { testMap } from "app/test/TestResult";
+import Loading from "app/loading";
 
 interface TestType {
   type: string;
@@ -27,6 +28,7 @@ function Test() {
   const [tests, setTests] = useState<TestType[]>([]);
   const query = useSearchParams().get("page");
   const router = useRouter();
+  const [flag, setFlag] = useState(true);
 
   const PageNum = Number(query);
   const ProgressBar = Array(6).fill("full");
@@ -74,16 +76,29 @@ function Test() {
   const moveNext = (type: string) => {
     let num = testMap.get(type)! + 1;
     testMap.set(type, num);
-    //console.log(type + " " + resultMap.get(type)!);
+
+    setFlag(true);
 
     if (NextNum === 12) {
       const src = "https://christmas-test.vercel.app/result";
       router.push(src);
     } else {
-      const src = "https://christmas-test.vercel.app/test/?page=" + NextNum;
+      const src = "https://christmas-test.vercel.app/test?page=" + NextNum;
       router.push(src);
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFlag(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  if (flag) {
+    return <Loading />;
+  }
 
   return (
     <StyledWrapper>
