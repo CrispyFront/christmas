@@ -109,6 +109,7 @@ const StyledResultImg = styled(Image)`
 const StyledTitle = styled.p`
   font-size: 2.5rem;
   color: #ffffff;
+  word-break: keep-all;
 
   @media (max-width: 420px) {
     font-size: 1.875rem;
