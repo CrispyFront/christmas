@@ -107,7 +107,7 @@ const StyledResultImg = styled(Image)`
 `;
 
 const StyledTitle = styled.p`
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #ffffff;
 
   @media (max-width: 420px) {
@@ -116,7 +116,7 @@ const StyledTitle = styled.p`
 `;
 
 const StyledSubTitle = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #808080;
 
   @media (max-width: 420px) {
