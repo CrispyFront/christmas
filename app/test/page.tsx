@@ -1,13 +1,13 @@
 "use client";
 
-import MainIcon from "assets/icons/MainIcon.png";
 import Answer from "components/Button/Answer";
 import Gauge from "components/Gauge/Gauge";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { getByTypeTestCase } from "@/libs/api";
+import { testMap } from "./TestResult";
 
 interface TestType {
   type: string;
@@ -25,10 +25,13 @@ interface TestType {
 
 function Test() {
   const [tests, setTests] = useState<TestType[]>([]);
+  const query = useSearchParams().get("page");
+  const router = useRouter();
 
-  const PageNum = Number(useSearchParams().get("page"));
+  const PageNum = Number(query);
   const ProgressBar = Array(6).fill("full");
-  const TypeNum = Math.ceil(PageNum / 4);
+  const TypeNum = Math.floor(PageNum / 3);
+  const NextNum = PageNum + 1;
 
   const full: number = Math.floor(PageNum / 2);
   const half: number = PageNum % 2;
@@ -56,6 +59,7 @@ function Test() {
         type = "FT";
         break;
     }
+
     const res = await getByTypeTestCase({ type });
     const { typeTestCase } = res;
     if (typeTestCase && typeTestCase.length > 0) {
@@ -65,7 +69,21 @@ function Test() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [query]);
+
+  const moveNext = (type: string) => {
+    let num = testMap.get(type)! + 1;
+    testMap.set(type, num);
+    //console.log(type + " " + resultMap.get(type)!);
+
+    if (NextNum === 12) {
+      const src = "http://localhost:3000/result";
+      router.push(src);
+    } else {
+      const src = "http://localhost:3000/test/?page=" + NextNum;
+      router.push(src);
+    }
+  };
 
   return (
     <StyledWrapper>
@@ -77,18 +95,26 @@ function Test() {
       {tests.length > 0 && (
         <StyledTest>
           <Image
-            src={tests[PageNum % 4].imageURL}
+            src={tests[PageNum % 3].imageURL}
             alt="아이콘"
             width="300"
             height="250"
           />
-          <StyledQuestion>{tests[PageNum % 4].question}</StyledQuestion>
+          <StyledQuestion>{tests[PageNum % 3].question}</StyledQuestion>
         </StyledTest>
       )}
       {tests.length > 0 && (
         <StyledButton>
-          <Answer color="green" text={tests[PageNum % 4].firstAnswer.content} />
-          <Answer color="red" text={tests[PageNum % 4].secondAnswer.content} />
+          <Answer
+            color="green"
+            text={tests[PageNum % 3].firstAnswer.content}
+            onClick={() => moveNext(tests[PageNum % 3].firstAnswer.type)}
+          />
+          <Answer
+            color="red"
+            text={tests[PageNum % 3].secondAnswer.content}
+            onClick={() => moveNext(tests[PageNum % 3].secondAnswer.type)}
+          />
         </StyledButton>
       )}
     </StyledWrapper>
