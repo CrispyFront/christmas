@@ -28,7 +28,7 @@ function Home() {
       </StyledTitleFrame>
       <LazyMotion features={domAnimation}>
         <m.div initial="initial" animate="animate" variants={SpringEffect}>
-          <Link href="/test">
+          <Link href="/test?page=0">
             <Image
               width={170}
               height={60}
