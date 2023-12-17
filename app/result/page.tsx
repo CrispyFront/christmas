@@ -8,7 +8,7 @@ import useGetURL from "hooks/useGetURL";
 import Image from "next/image";
 import { styled } from "styled-components";
 import { testMap } from "app/test/TestResult";
-import { RESULT_IMAGE } from "@/constants/result";
+import { TEST_RESULT } from "@/constants/result";
 
 function Result() {
   const url = useGetURL();
@@ -35,7 +35,7 @@ function Result() {
     result += "J";
   }
 
-  const resultObject = RESULT_IMAGE.filter((val) => val.mbti === result);
+  const resultObject = TEST_RESULT.filter((val) => val.mbti === result);
   console.log(resultObject);
 
   return (
