@@ -96,43 +96,45 @@ function Test() {
     return () => clearTimeout(timer);
   }, [query]);
 
-  if (flag) {
-    return <Loading />;
-  }
-
   return (
-    <StyledWrapper>
-      <StyledProgressBar>
-        {ProgressBar.map((value, index) => (
-          <Gauge key={index} type={value} />
-        ))}
-      </StyledProgressBar>
-      {tests.length > 0 && (
-        <StyledTest>
-          <Image
-            src={tests[PageNum % 3].imageURL}
-            alt="아이콘"
-            width="300"
-            height="250"
-          />
-          <StyledQuestion>{tests[PageNum % 3].question}</StyledQuestion>
-        </StyledTest>
+    <>
+      {flag ? (
+        <Loading />
+      ) : (
+        <StyledWrapper>
+          <StyledProgressBar>
+            {ProgressBar.map((value, index) => (
+              <Gauge key={index} type={value} />
+            ))}
+          </StyledProgressBar>
+          {tests.length > 0 && (
+            <StyledTest>
+              <Image
+                src={tests[PageNum % 3].imageURL}
+                alt="아이콘"
+                width="300"
+                height="250"
+              />
+              <StyledQuestion>{tests[PageNum % 3].question}</StyledQuestion>
+            </StyledTest>
+          )}
+          {tests.length > 0 && (
+            <StyledButton>
+              <Answer
+                color="green"
+                text={tests[PageNum % 3].firstAnswer.content}
+                onClick={() => moveNext(tests[PageNum % 3].firstAnswer.type)}
+              />
+              <Answer
+                color="red"
+                text={tests[PageNum % 3].secondAnswer.content}
+                onClick={() => moveNext(tests[PageNum % 3].secondAnswer.type)}
+              />
+            </StyledButton>
+          )}
+        </StyledWrapper>
       )}
-      {tests.length > 0 && (
-        <StyledButton>
-          <Answer
-            color="green"
-            text={tests[PageNum % 3].firstAnswer.content}
-            onClick={() => moveNext(tests[PageNum % 3].firstAnswer.type)}
-          />
-          <Answer
-            color="red"
-            text={tests[PageNum % 3].secondAnswer.content}
-            onClick={() => moveNext(tests[PageNum % 3].secondAnswer.type)}
-          />
-        </StyledButton>
-      )}
-    </StyledWrapper>
+    </>
   );
 }
 
