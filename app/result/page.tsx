@@ -1,14 +1,13 @@
 "use client";
 
-import MainIcon from "assets/icons/MainIcon.png";
+import { TEST_RESULT } from "@/constants/result";
+import { testMap } from "app/test/TestResult";
 import Return from "components/Button/Return";
 import ShareButtons from "components/Share/ShareButtons";
 import CategoryByType from "components/Text/CategoryByType";
 import useGetURL from "hooks/useGetURL";
 import Image from "next/image";
 import { styled } from "styled-components";
-import { testMap } from "app/test/TestResult";
-import { TEST_RESULT } from "@/constants/result";
 
 function Result() {
   const url = useGetURL();
@@ -36,7 +35,6 @@ function Result() {
   }
 
   const resultObject = TEST_RESULT.filter((val) => val.mbti === result);
-  console.log(resultObject);
 
   return (
     <StyledWrapper>
