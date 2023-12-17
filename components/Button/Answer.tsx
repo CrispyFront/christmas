@@ -7,9 +7,10 @@ import Image from "next/image";
 interface Answer {
   color: "red" | "green";
   text: string;
+  onClick: any;
 }
 
-function Answer({ color, text }: Answer) {
+function Answer({ color, text, onClick }: Answer) {
   const moveNext = () => {
     console.log(color);
   };
@@ -20,7 +21,7 @@ function Answer({ color, text }: Answer) {
   };
 
   return (
-    <StyledWrapper onClick={moveNext}>
+    <StyledWrapper onClick={onClick}>
       <Image fill src={ButtonImg[color]} alt="답변 버튼" />
       <p>{text}</p>
     </StyledWrapper>
@@ -40,9 +41,11 @@ const StyledWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    width: 80%;
+    line-height: 1.5;
   }
+
   @media (max-width: 420px) {
-    width: 255px;
-    height: 92.7px;
+    width: 300px;
   }
 `;

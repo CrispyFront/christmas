@@ -1,24 +1,89 @@
 "use client";
 
-import MainIcon from "assets/icons/MainIcon.png";
 import Answer from "components/Button/Answer";
 import Gauge from "components/Gauge/Gauge";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { styled } from "styled-components";
+import { getByTypeTestCase } from "@/libs/api";
+import { testMap } from "app/test/TestResult";
+
+interface TestType {
+  type: string;
+  question: string;
+  firstAnswer: {
+    type: string;
+    content: string;
+  };
+  secondAnswer: {
+    type: string;
+    content: string;
+  };
+  imageURL: string;
+}
 
 function Test() {
-  const PageNum = Number(useSearchParams().get("page"));
+  const [tests, setTests] = useState<TestType[]>([]);
+  const query = useSearchParams().get("page");
+  const router = useRouter();
+
+  const PageNum = Number(query);
   const ProgressBar = Array(6).fill("full");
+  const TypeNum = Math.floor(PageNum / 3);
+  const NextNum = PageNum + 1;
 
   const full: number = Math.floor(PageNum / 2);
   const half: number = PageNum % 2;
+
   if (half === 1) {
     ProgressBar[full] = "half";
     ProgressBar.fill("empty", full + 1, 6);
   } else {
     ProgressBar.fill("empty", full, 6);
   }
+
+  const fetchData = async () => {
+    let type = "";
+    switch (TypeNum) {
+      case 0:
+        type = "IE";
+        break;
+      case 1:
+        type = "PJ";
+        break;
+      case 2:
+        type = "NS";
+        break;
+      case 3:
+        type = "FT";
+        break;
+    }
+
+    const res = await getByTypeTestCase({ type });
+    const { typeTestCase } = res;
+    if (typeTestCase && typeTestCase.length > 0) {
+      setTests(typeTestCase);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [query]);
+
+  const moveNext = (type: string) => {
+    let num = testMap.get(type)! + 1;
+    testMap.set(type, num);
+    //console.log(type + " " + resultMap.get(type)!);
+
+    if (NextNum === 12) {
+      const src = "https://christmas-test.vercel.app/result";
+      router.push(src);
+    } else {
+      const src = "https://christmas-test.vercel.app/test/?page=" + NextNum;
+      router.push(src);
+    }
+  };
 
   return (
     <StyledWrapper>
@@ -27,16 +92,31 @@ function Test() {
           <Gauge key={index} type={value} />
         ))}
       </StyledProgressBar>
-      <StyledTest>
-        <Image src={MainIcon} alt="아이콘" width="300" />
-        <StyledQuestion>
-          당신은... 크리스마스 날 벽난로에서 야생의 산타와 마주쳤습니다.
-        </StyledQuestion>
-      </StyledTest>
-      <StyledButton>
-        <Answer color="green" text="1번 답" />
-        <Answer color="red" text="2번 답" />
-      </StyledButton>
+      {tests.length > 0 && (
+        <StyledTest>
+          <Image
+            src={tests[PageNum % 3].imageURL}
+            alt="아이콘"
+            width="300"
+            height="250"
+          />
+          <StyledQuestion>{tests[PageNum % 3].question}</StyledQuestion>
+        </StyledTest>
+      )}
+      {tests.length > 0 && (
+        <StyledButton>
+          <Answer
+            color="green"
+            text={tests[PageNum % 3].firstAnswer.content}
+            onClick={() => moveNext(tests[PageNum % 3].firstAnswer.type)}
+          />
+          <Answer
+            color="red"
+            text={tests[PageNum % 3].secondAnswer.content}
+            onClick={() => moveNext(tests[PageNum % 3].secondAnswer.type)}
+          />
+        </StyledButton>
+      )}
     </StyledWrapper>
   );
 }
