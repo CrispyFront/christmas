@@ -68,7 +68,7 @@ function Result() {
       </StyledResult>
 
       <StyledButtonWrapper>
-        <ShareButtons url={url} />
+        <ShareButtons url={url} result={resultObject[0]} />
         <StyledReturnWrapper>
           <Return title="다시하기" link="/" />
           <Return title="모든 결과 보기" link="/all" />
