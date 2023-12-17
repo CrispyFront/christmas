@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import styled from "styled-components";
 import { theme } from "styles/theme";
-import Image from "next/image";
 
 interface Answer {
   color: "red" | "green";
@@ -11,10 +11,6 @@ interface Answer {
 }
 
 function Answer({ color, text, onClick }: Answer) {
-  const moveNext = () => {
-    console.log(color);
-  };
-
   const ButtonImg: { [State in Answer["color"]]: string } = {
     red: theme.btnColor.red,
     green: theme.btnColor.green,

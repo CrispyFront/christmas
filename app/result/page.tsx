@@ -1,14 +1,13 @@
 "use client";
 
-import MainIcon from "assets/icons/MainIcon.png";
+import { TEST_RESULT } from "@/constants/result";
+import { testMap } from "app/test/TestResult";
 import Return from "components/Button/Return";
 import ShareButtons from "components/Share/ShareButtons";
 import CategoryByType from "components/Text/CategoryByType";
 import useGetURL from "hooks/useGetURL";
 import Image from "next/image";
 import { styled } from "styled-components";
-import { testMap } from "app/test/TestResult";
-import { TEST_RESULT } from "@/constants/result";
 
 function Result() {
   const url = useGetURL();
@@ -36,7 +35,6 @@ function Result() {
   }
 
   const resultObject = TEST_RESULT.filter((val) => val.mbti === result);
-  console.log(resultObject);
 
   return (
     <StyledWrapper>
@@ -66,7 +64,6 @@ function Result() {
           />
         </StyledCategoryWrapper>
       </StyledResult>
-
       <StyledButtonWrapper>
         <ShareButtons url={url} result={resultObject[0]} />
         <StyledReturnWrapper>
@@ -105,14 +102,12 @@ const StyledResult = styled.div`
 `;
 
 const StyledResultImg = styled(Image)`
-  @media (max-width: 420px) {
-    width: 95%;
-    height: auto;
-  }
+  width: 80%;
+  height: auto;
 `;
 
 const StyledTitle = styled.p`
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #ffffff;
 
   @media (max-width: 420px) {
@@ -121,7 +116,7 @@ const StyledTitle = styled.p`
 `;
 
 const StyledSubTitle = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #808080;
 
   @media (max-width: 420px) {
@@ -137,6 +132,10 @@ const StyledContent = styled.p`
 
   @media (max-width: 420px) {
     font-size: 0.875rem;
+  }
+
+  @media (min-width: 430px) {
+    width: 80%;
   }
 `;
 
@@ -154,6 +153,12 @@ const StyledCategoryWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 50px;
+
+  @media (min-width: 430px) {
+    width: 30%;
+    position: relative;
+    left: -155px;
+  }
 `;
 
 const StyledReturnWrapper = styled.div`

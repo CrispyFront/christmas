@@ -1,14 +1,14 @@
 "use client";
 
+import Loading from "app/loading";
+import { testMap } from "app/test/TestResult";
 import Answer from "components/Button/Answer";
 import Gauge from "components/Gauge/Gauge";
+import { getByTypeTestCase } from "libs/api";
 import Image from "next/image";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
-import { getByTypeTestCase } from "@/libs/api";
-import { testMap } from "app/test/TestResult";
-import Loading from "app/loading";
 
 interface TestType {
   type: string;
