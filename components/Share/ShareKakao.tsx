@@ -9,11 +9,12 @@ declare global {
     Kakao: any;
   }
 }
-export interface Size {
+export interface KakaoContent {
   size: "small" | "medium" | "large";
+  result?: { title: string; subTitle: string; content: string; img: string };
 }
 
-function ShareKakao({ size }: Size) {
+function ShareKakao({ size, result }: KakaoContent) {
   const initializeKakao = (script: HTMLScriptElement) => {
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
     script.onload = () => {
@@ -21,15 +22,19 @@ function ShareKakao({ size }: Size) {
     };
     document.body.appendChild(script);
   };
-
   const sharedKakao = () => {
     if (window.Kakao.isInitialized()) {
-      window.Kakao.Share.sendCustom({
-        templateId: 101197,
-        templateArgs: {
-          character: "크리스마스 문어",
-        },
-      });
+      if (result) {
+        window.Kakao.Share.sendCustom({
+          templateId: 101197,
+          templateArgs: {
+            character: result.title,
+            subtitle: result.subTitle,
+            content: result.content,
+            imageURL: result.img,
+          },
+        });
+      }
     } else {
       console.error("kakao script error");
     }
@@ -52,7 +57,7 @@ function ShareKakao({ size }: Size) {
 
 export default ShareKakao;
 
-const StyledWrapper = styled.button<Size>`
+const StyledWrapper = styled.button<KakaoContent>`
   display: flex;
   position: relative;
   justify-content: center;
