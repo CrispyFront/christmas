@@ -7,7 +7,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { getByTypeTestCase } from "@/libs/api";
-import { testMap } from "./TestResult";
+import { testMap } from "app/test/TestResult";
 
 interface TestType {
   type: string;
