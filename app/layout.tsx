@@ -43,6 +43,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <head>
+        <link rel="icon" href={METADATA.ICON} sizes="any" />
+      </head>
       <body>
         <GoogleAnalytics />
         <Hotjar />
