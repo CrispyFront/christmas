@@ -18,6 +18,6 @@ export async function POST(req: Request) {
 
 export async function GET() {
   await dbConnect();
-  const testes = await TestCase.find();
-  return NextResponse.json({ testes });
+  const tests = await TestCase.find();
+  return NextResponse.json({ tests });
 }
