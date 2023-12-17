@@ -10,8 +10,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { styled } from "styled-components";
 import { SpringEffect } from "styles/motion/SpringEffect";
+import { init } from "app/test/TestResult";
 
 function Home() {
+  init();
   return (
     <StyledWrapper>
       <JingleBell />
