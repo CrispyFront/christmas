@@ -40,6 +40,7 @@ const StyledWrapper = styled.div`
     width: 80%;
     line-height: 1.5;
     word-break: keep-all;
+    text-align: center;
   }
 
   @media (max-width: 420px) {

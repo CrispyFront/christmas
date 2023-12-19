@@ -91,7 +91,7 @@ function Test() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFlag(false);
-    }, 500);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [query]);
@@ -112,8 +112,8 @@ function Test() {
               <Image
                 src={tests[PageNum % 3].imageURL}
                 alt="아이콘"
-                width="300"
-                height="250"
+                width="250"
+                height="200"
               />
               <StyledQuestion>{tests[PageNum % 3].question}</StyledQuestion>
             </StyledTest>
