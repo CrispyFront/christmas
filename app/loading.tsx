@@ -4,7 +4,6 @@ import Image from "next/image";
 
 function Loading() {
   const StyleDiv: React.CSSProperties = {
-    position: "fixed",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
