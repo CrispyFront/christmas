@@ -9,7 +9,7 @@ export async function GET(
 ) {
   const { type } = params;
   await dbConnect();
-  const typeTestCase = await TestCase.find({ type: `${type}` });
+  const typeTestCase = await TestCase.find({ type: `${type}`, rowState: 0 });
   const newHeaders = useAllowCORS(req);
   return NextResponse.json(
     { typeTestCase },
