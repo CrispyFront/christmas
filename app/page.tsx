@@ -11,6 +11,8 @@ import Link from "next/link";
 import { styled } from "styled-components";
 import { SpringEffect } from "styles/motion/SpringEffect";
 import { init } from "app/test/TestResult";
+import { Suspense } from "react";
+import Loading from "app/loading";
 
 function Home() {
   init();
@@ -28,14 +30,16 @@ function Home() {
       </StyledTitleFrame>
       <LazyMotion features={domAnimation}>
         <m.div initial="initial" animate="animate" variants={SpringEffect}>
-          <Link href="/test?page=0">
-            <Image
-              width={170}
-              height={60}
-              src={StartButton.src}
-              alt="시작 버튼"
-            />
-          </Link>
+          <Suspense fallback={<Loading />}>
+            <Link href="/test?page=0">
+              <Image
+                width={170}
+                height={60}
+                src={StartButton.src}
+                alt="시작 버튼"
+              />
+            </Link>
+          </Suspense>
         </m.div>
       </LazyMotion>
 
